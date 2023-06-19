@@ -1,8 +1,7 @@
-import Home from "../components/Home/Home";
 import Login from "../components/Login/Login";
 import Admin from "../components/Admin/Admin";
-import EmptyLayout from "../Layout/EmptyLayout/EmptyLayout";
-
+import Home from "../components/Persona/Home";
+import EmptyLayout from "../Layout/EmptyLayout";
 export const AllRoutes = [
   {
     path: "/",

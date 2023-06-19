@@ -3,7 +3,7 @@ import { BsHeadset } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <div className=" bg-primary font-LexendDeca text-white w-full">
+    <div className=" bg-primary font-LexendDeca text-black w-full">
       {" "}
       <div className="flex justify-center pt-9 pb-8 d:flex-row p:flex-col">
         <div className=" border-b-[1px] border-gray-400  h-[240px] d:w-[550px] p:w-screen d:mx-0 p:mx-3">
