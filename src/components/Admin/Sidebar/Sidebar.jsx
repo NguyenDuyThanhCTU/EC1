@@ -11,12 +11,12 @@ const Sidebar = () => {
   const { isSelected, setSelected } = useStateProvider();
   console.log(isSelected);
   return (
-    <div className="bg-black w-[450px] h-screen text-white">
-      <div className="w-full flex items-center justify-center border-b py-3">
+    <div className="bg-black  h-screen text-white border-r border-gray-800">
+      <div className="w-full flex items-center justify-center border-b border-gray-800 py-3">
         <img
           src="https://image-sn.s3.amazonaws.com/Russo+Tech.png"
           alt="logo"
-          className="w-24 h-24 inline-block "
+          className="w-24 h-[100] inline-block "
         />
         <p className="inline-block ml-3 text-[25px]">Th Dashboard</p>
       </div>

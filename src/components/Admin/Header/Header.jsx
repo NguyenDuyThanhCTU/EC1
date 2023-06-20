@@ -6,9 +6,15 @@ import { useStateProvider } from "../../../Context/StateProvider";
 const Header = () => {
   const { users } = useAuth();
 
-  const { setSelectedRole, isSelectedRole } = useStateProvider();
+  const { setSelectedRole, isSelectedRole, setSelected } = useStateProvider();
+
+  const changeRoleDashboard = (idx) => {
+    setSelectedRole(idx);
+    setSelected(0);
+  };
+
   return (
-    <div className=" h-14 bg-Blue3D font-LexendDeca text-white flex w-screen">
+    <div className=" h-14 bg-Blue3D font-LexendDeca text-white flex ">
       <div className="flex justify-between w-full mx-10 items-center relative ">
         <div className="flex gap-32 cursor-pointer">
           <div className="flex items-center">
@@ -28,10 +34,10 @@ const Header = () => {
         </div>
 
         <div className="cursor-pointer flex gap-20 ">
-          <div onClick={() => setSelectedRole(1)}>
+          <div onClick={() => changeRoleDashboard(1)}>
             <p className="hover:scale-110 duration-300">Doanh nghiệp</p>
           </div>
-          <div onClick={() => setSelectedRole(0)}>
+          <div onClick={() => changeRoleDashboard(0)}>
             <p className="hover:scale-110 duration-300">Cá nhân</p>
           </div>
         </div>
