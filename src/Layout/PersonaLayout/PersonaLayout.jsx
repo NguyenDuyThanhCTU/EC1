@@ -8,10 +8,12 @@ const PersonaLayout = ({ children }) => {
   const [isLogin, setIsLogin] = useState(false);
 
   return (
-    <div className="font-OpenSans bg-[#e8edef]">
-      <Header Login={setIsLogin} />
+    <div className="font-OpenSans bg-[#e8edef] relative w-[1920px]">
+      <div className="z-50 relative">
+        <Header Login={setIsLogin} />
+      </div>
 
-      <main className="z-0 mx-[250px] ">
+      <main className="mx-[250px] ">
         {children}
         <div>
           <Footer />

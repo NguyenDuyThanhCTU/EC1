@@ -1,6 +1,9 @@
 import React from "react";
+import { useData } from "../../../../../../Context/DataProviders";
 
 const Contact = () => {
+  const { Phone, Gmail, Location, Adress } = useData();
+
   return (
     <div className="bg-[#353535] text-white w-[400px] rounded-xl shadow-xl">
       <div className="p-4 ">
@@ -9,6 +12,7 @@ const Contact = () => {
           <label>Số điện thoại</label>
           <div className="flex gap-5">
             <input
+              placeholder={Phone}
               type="text"
               className="px-4 py-2 text-black outline-none rounded-2xl bg-gray-300 bg-gray-300"
             />
@@ -22,6 +26,7 @@ const Contact = () => {
           <div className="flex gap-5">
             <input
               type="text"
+              placeholder={Gmail}
               className="px-4 py-2 text-black outline-none rounded-2xl bg-gray-300"
             />
             <button className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 rounded-xl">
@@ -32,7 +37,10 @@ const Contact = () => {
         <div className="flex flex-col gap-3 mt-5">
           <label>Địa chỉ</label>
           <div className="flex gap-5">
-            <textarea className="px-2 py-2 text-black outline-none rounded-2xl bg-gray-300" />
+            <textarea
+              className="px-2 py-2 text-black outline-none rounded-2xl bg-gray-300"
+              placeholder={Adress}
+            />
             <div>
               <button className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 rounded-xl py-2">
                 Cập nhật
@@ -45,6 +53,7 @@ const Contact = () => {
           <div className="flex gap-5">
             <input
               type="text"
+              placeholder={Location}
               className="px-4 py-2 text-black outline-none rounded-2xl bg-gray-300"
             />
             <button className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 rounded-xl">

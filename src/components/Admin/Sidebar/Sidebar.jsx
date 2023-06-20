@@ -16,7 +16,7 @@ const Sidebar = () => {
         <img
           src="https://image-sn.s3.amazonaws.com/Russo+Tech.png"
           alt="logo"
-          className="w-24 h-[100] inline-block "
+          className="w-24 h-[100] inline-block circle-animation"
         />
         <p className="inline-block ml-3 text-[25px]">Th Dashboard</p>
       </div>

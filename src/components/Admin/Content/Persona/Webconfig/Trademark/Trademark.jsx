@@ -1,6 +1,8 @@
 import React from "react";
+import { useData } from "../../../../../../Context/DataProviders";
 
 const Trademark = () => {
+  const { Websitename, Logo } = useData();
   return (
     <div className="bg-[#353535] text-white w-[400px] rounded-xl shadow-xl">
       <div className="p-4 ">
@@ -10,6 +12,7 @@ const Trademark = () => {
           <div className="flex gap-5">
             <input
               type="text"
+              placeholder={Websitename}
               className="px-4 py-2 text-black outline-none rounded-2xl bg-gray-300 bg-gray-300"
             />
             <button className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 rounded-xl">
@@ -22,6 +25,7 @@ const Trademark = () => {
           <div className="flex gap-5">
             <input
               type="text"
+              placeholder={Logo}
               className="px-4 py-2 text-black outline-none rounded-2xl bg-gray-300"
             />
             <button className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 rounded-xl">

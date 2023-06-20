@@ -7,6 +7,7 @@ export const PersonaSection2Card = [
     title: "Một số thông tin cần lưu ý trong hợp đồng bảo hiểm nhân thọ",
     content:
       " Một số thông tin cần lưu ý trong hợp đồng bảo hiểm nhân thọ gồm một số định nghĩa quan trọng kèm ví dụ quan trọng và các lưu ý quan trọng khác. ",
+    link: "https://www.prudential.com.vn/vi/thong-tin-uu-dai-dich-vu-danh-cho-khach-hang/mot-so-thong-tin-can-luu-y-trong-hop-dong-bao-hiem-nhan-tho/",
   },
   {
     image:
@@ -16,6 +17,7 @@ export const PersonaSection2Card = [
     title: "Chương trình khuyến mại “Mình Còn Cần Nhau 4“",
     content:
       " Từ ngày 14/06/2023 đến hết ngày 30/06/2023 khi mua Hợp đồng Bảo hiểm Nhân thọ (BHNT) do Prudential phát hành qua Kênh phân phối Đại Lý tại các Văn phòng Tổng Đại Lý Prudential, Khách hàng sẽ có cơ hội tham gia chương trình khuyến mại mang tên “Mình Còn Cần Nhau 4” để nhận được quà tặng vô cùng hấp dẫn. ",
+    link: "https://www.prudential.com.vn/vi/chuong-trinh-khuyen-mai/chuong-trinh-khuyen-mai-minh-con-can-nhau-4/",
   },
   {
     image:
@@ -25,6 +27,7 @@ export const PersonaSection2Card = [
     title: "Chương trình khuyến mại “Mình Còn Cần Nhau 3“",
     content:
       " Từ ngày 08/06/2023 đến hết ngày 30/06/2023 khách hàng khi mua Hợp đồng Bảo hiểm Nhân thọ (BHNT) do Prudential phát hành qua Kênh phân phối Đại Lý tại các Văn phòng Tổng Đại Lý Prudential và kênh Bán Hàng Thành Thị PRUVenture, Khách hàng sẽ có cơ hội tham gia chương trình khuyến mại mang tên “Mình Còn Cần Nhau 3” để nhận được quà tặng vô cùng hấp dẫn. ",
+    link: "https://www.prudential.com.vn/vi/chuong-trinh-khuyen-mai/chuong-trinh-khuyen-mai-minh-con-can-nhau-3/",
   },
   {
     image:
@@ -34,6 +37,7 @@ export const PersonaSection2Card = [
     title: "Chương trình khuyến mại “Mình Còn Cần Nhau 3“",
     content:
       " Từ ngày 08/06/2023 đến hết ngày 30/06/2023 khách hàng khi mua Hợp đồng Bảo hiểm Nhân thọ (BHNT) do Prudential phát hành qua Kênh phân phối Đại Lý tại các Văn phòng Tổng Đại Lý Prudential và kênh Bán Hàng Thành Thị PRUVenture, Khách hàng sẽ có cơ hội tham gia chương trình khuyến mại mang tên “Mình Còn Cần Nhau 3” để nhận được quà tặng vô cùng hấp dẫn. ",
+    link: "https://www.prudential.com.vn/vi/thong-cao-bao-chi/hang-tram-hoc-sinh-duoc-choi-game-de-trai-nghiem-ky-nang-quan-ly-tien-tai-ngay-hoi-cha-ching/",
   },
 ];
 

@@ -18,11 +18,11 @@ const Header = () => {
       <div className="flex justify-between w-full mx-10 items-center relative ">
         <div className="flex gap-32 cursor-pointer">
           <div className="flex items-center">
-            <div className="group relative">
+            <div className="group relative ">
               <img
                 src={users?.photoURL}
                 alt="logo"
-                className="w-12 h-12 inline-block"
+                className="w-12 h-12 inline-block "
               />
               <div className="absolute right-[-115px] top-[75px] hidden  group-hover:block ">
                 <DropDown />

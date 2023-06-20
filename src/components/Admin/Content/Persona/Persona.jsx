@@ -17,7 +17,6 @@ const Persona = () => {
         </div>
       ) : isSelected === 1 ? (
         <div className="p-5 px-10 flex justify-start gap-10">
-    
           <SocialMedia />
         </div>
       ) : isSelected === 2 ? (

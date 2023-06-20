@@ -3,6 +3,7 @@ import { BsEmojiSmile } from "react-icons/bs";
 import { BiCalculator } from "react-icons/bi";
 import { RxMagicWand } from "react-icons/rx";
 import { GiExitDoor } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const DropDown = () => {
   return (
@@ -21,10 +22,12 @@ const DropDown = () => {
             <RxMagicWand className="inline-block text-colortopdownBlue mr-2 " />
             Trang trí CV
           </li>
-          <li className="hover:bg-purple-400  duration-300 element-dropdown text-redPrimmary">
-            <GiExitDoor className="inline-block  mr-2" />
-            Thoát
-          </li>
+          <Link to="/">
+            <li className="hover:bg-purple-400  duration-300 element-dropdown text-redPrimmary">
+              <GiExitDoor className="inline-block  mr-2" />
+              Thoát
+            </li>
+          </Link>
         </ul>
 
         <div className="absolute w-4 h-4 border border-b-0 border-r-0 bg-white border-solid border-colortopdownBlue -top-2 right-[50%] transform rotate-45 z-0"></div>

@@ -41,6 +41,7 @@ const Section2 = () => {
                 type={items.type}
                 title={items.title}
                 content={items.content}
+                link={items.link}
               />
             </>
           ))}

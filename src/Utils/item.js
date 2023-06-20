@@ -1,6 +1,6 @@
 export const HeaderItems = [
   {
-    Content: "Mình còn cần nhau?",
+    Content: "Giới thiệu sản phẩm",
     title: [
       {
         name: "Chiến dịch thương hiệu: Mình Còn Cần Nhau?",
@@ -13,7 +13,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Pulse",
+    Content: "Cơ hội nghề nghiệp",
     title: [
       {
         name: "Tìm hiểu Pulse ",
@@ -30,7 +30,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Sản phẩm bảo hiểm",
+    Content: "Giới thiệu",
     title: [
       {
         name: "Kế hoạch bảo vệ & chăm sóc sức khỏe",
@@ -63,7 +63,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Chăm sóc khách hàng",
+    Content: "Liên hệ",
     title: [
       {
         name: " Giải quyết quyền lợi bảo hiểm ",
@@ -104,43 +104,6 @@ export const HeaderItems = [
       },
       {
         name: "Chuyên viên hoạch định tài chính Prudential - Kênh đại lý",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-    ],
-  },
-  {
-    Content: "Về Prudential",
-    title: [
-      {
-        name: "Tìm hiểu về Prudential",
-        link: "https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/",
-      },
-      {
-        name: "Phát triển cộng đồng bền vững",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-      {
-        name: "Tự do tuổi 50 - Sẵn sàng cho cuộc sống về già",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-      {
-        name: "Chiến dịch thương hiệu: Khi Tình Yêu Đủ Lớn",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-      {
-        name: "175 năm tôn vinh cuộc sống",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-      {
-        name: "Thông cáo báo chí",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-      {
-        name: "Văn phòng giao dịch gần bạn nhất",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-      {
-        name: "Liên hệ",
         link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
       },
     ],
