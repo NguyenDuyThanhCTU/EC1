@@ -1,12 +1,14 @@
 import Login from "../components/Login/Login";
 import Admin from "../components/Admin/Admin";
-import Home from "../components/Persona/Home";
 import EmptyLayout from "../Layout/EmptyLayout";
+import Home from "../components/Persona/Home/Home";
+
 export const AllRoutes = [
   {
     path: "/",
     component: Home,
   },
+
   {
     path: "/login",
     component: Login,

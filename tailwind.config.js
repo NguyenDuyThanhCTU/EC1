@@ -13,9 +13,13 @@ module.exports = {
 
       fontFamily: {
         OpenSans: ["Open Sans", "sans-serif"],
+        LexendDeca: ["Lexend Deca", "sans-serif"],
       },
       colors: {
         redPrimmary: "#ed1b2e",
+        Blue3D: "#1D1D3D",
+        colortopdownBlue: "#2c95ff",
+        colortopdownGray: "#414045",
       },
       fontSize: {
         content: "48px",

@@ -19,9 +19,9 @@ const Header = () => {
   };
 
   return (
-    <div className=" mb-96 ">
-      <div className="bg-[#e8edef] ">
-        <div className=" bg-none h-[126px] relative z-50 bg-[#e8edef] ">
+    <div className="h-[126px] ">
+      <div className="bg-white ">
+        <div className=" bg-none h-[126px] relative z-50 bg-white ">
           <div className="mx-[400px] flex justify-between  items-center  italic text-[#1b365d] h-[92px]">
             <Link to="/">
               <img

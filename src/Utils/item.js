@@ -146,3 +146,209 @@ export const HeaderItems = [
     ],
   },
 ];
+
+export const FooterItems = [
+  {
+    title: "Pulse Nhịp Sống Khỏe",
+    content: [
+      {
+        text: "Trang chủ",
+        link: "/",
+      },
+      {
+        text: "Tìm hiểu Pulse",
+        link: "https://www.prudential.com.vn/vi/tim-hieu-pulse/",
+      },
+      {
+        text: "Blog Nhịp Sống Khỏe",
+        link: "https://www.prudential.com.vn/vi/blog-nhip-song-khoe/",
+      },
+      {
+        text: "Pulse Rewards",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+    ],
+  },
+  {
+    title: "Sản phẩm bảo hiểm",
+    content: [
+      {
+        text: "Sản phẩm bảo hiểm chính",
+        link: "/",
+      },
+      {
+        text: "Kế hoạch bảo vệ & chăm sóc sức khỏe",
+        link: "https://www.prudential.com.vn/vi/tim-hieu-pulse/",
+      },
+      {
+        text: "Kế hoạch tích lũy",
+        link: "https://www.prudential.com.vn/vi/blog-nhip-song-khoe/",
+      },
+      {
+        text: "Kế hoạch đầu tư",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+      {
+        text: "Sản phẩm bảo hiểm bổ trợ",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+      {
+        text: "Thông tin các Quỹ đầu tư",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+      {
+        text: "Tài liệu và biểu mẫu tham khảo",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+      {
+        text: "Chương trình khuyến mại",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+    ],
+  },
+  {
+    title: "Chăm sóc khách hàng",
+    content: [
+      {
+        text: "Giải quyết quyền lợi bảo hiểm",
+        link: "/",
+      },
+      {
+        text: "Kênh thanh toán phí bảo hiểm",
+        link: "https://www.prudential.com.vn/vi/tim-hieu-pulse/",
+      },
+      {
+        text: "PRUOnline – Cổng thông tin khách hàng",
+        link: "https://www.prudential.com.vn/vi/blog-nhip-song-khoe/",
+      },
+      {
+        text: "PRURewards – Đổi điểm nhận quà",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+      {
+        text: "Thông tin & ưu đãi dịch vụ",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+    ],
+  },
+  {
+    title: "Cơ hội nghề nghiệp",
+    content: [
+      {
+        text: "Cơ hội nghề nghiệp tại Prudential",
+        link: "/",
+      },
+      {
+        text: "Cơ hội phát triển tại Kênh hợp tác kinh doanh",
+        link: "https://www.prudential.com.vn/vi/tim-hieu-pulse/",
+      },
+      {
+        text: "PRUPlanner – Chuyên viên hoạch định tài chính",
+        link: "https://www.prudential.com.vn/vi/blog-nhip-song-khoe/",
+      },
+      {
+        text: "Chuyên viên hoạch định tài chính Prudential - Kênh đại lý",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+    ],
+  },
+  {
+    title: "Prudential Việt Nam",
+    content: [
+      {
+        text: "Tìm hiểu về Prudential",
+        link: "/",
+      },
+      {
+        text: "Phát triển cộng đồng bền vững",
+        link: "https://www.prudential.com.vn/vi/tim-hieu-pulse/",
+      },
+      {
+        text: "Thông cáo báo chí",
+        link: "https://www.prudential.com.vn/vi/blog-nhip-song-khoe/",
+      },
+      {
+        text: "Chiến dịch thương hiệu",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+      {
+        text: "Liên hệ",
+        link: "https://www.prudential.com.vn/vi/pulse-rewards/",
+      },
+    ],
+  },
+];
+export const PersonaSection2 = [
+  {
+    name: "Tin tức    ",
+  },
+  {
+    name: "Khuyến mại",
+  },
+  {
+    name: "PRURewards",
+  },
+  {
+    name: "Dịch vụ",
+  },
+];
+
+export const PersonaSection4 = [
+  {
+    name: "Bảo hiểm cho con",
+  },
+  {
+    name: "Bảo hiểm đầu tư",
+  },
+  {
+    name: "Bảo hiểm nhân thọ",
+  },
+  {
+    name: "Bảo hiểm sức khỏe",
+  },
+];
+
+export const BrickSize = [
+  { id: 1, name: "15x90" },
+  { id: 2, name: "50x50" },
+  { id: 3, name: "60x60" },
+  { id: 4, name: "80x80" },
+  { id: 5, name: "60x120" },
+];
+
+export const BrickType = [
+  { id: 1, name: "GC" },
+  { id: 2, name: "GK" },
+  { id: 3, name: "Matt" },
+  { id: 4, name: "Polished" },
+];
+
+export const ProductSidebarAdmin = [
+  {
+    name: "Danh sách sản phẩm",
+    icon: "AiOutlineUnorderedList",
+  },
+  {
+    name: "loại sản phẩm",
+    icon: "CgListTree",
+  },
+];
+
+export const WebsiteSidebarAdmin = [
+  {
+    name: "Thông tin website",
+    icon: "TbListDetails",
+  },
+  {
+    name: "Slide trình chiếu",
+    icon: "TbSlideshow",
+  },
+  {
+    name: "Kênh truyền thông",
+    icon: "BiNetworkChart",
+  },
+  {
+    name: "Các bài viết",
+    icon: "MdOutlinePostAdd",
+  },
+];
