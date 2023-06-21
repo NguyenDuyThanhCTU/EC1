@@ -127,7 +127,6 @@ const Header = () => {
                   <p>Đăng nhập</p>
                 </div>
               </div>
-              <div className=" h-full  w-full"></div>
             </div>
           </div>
 

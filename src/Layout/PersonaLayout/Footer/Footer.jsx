@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <div className=" bg-primary font-LexendDeca text-white">
       <div className=" bg-[#1f1f1f]">
-        <div className="grid grid-cols-6 text-[#e5eaef] gap-10 px-20 py-10">
+        <div className="grid d:grid-cols-6 p:grid-cols-2 text-[#e5eaef] d:gap-10 p:gap-2 p:px-2 d:px-20 py-10">
           {FooterItems.map((items) => (
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 p:shadow-2xl  p:p-2 p:border rounded-md d:border-none d:shadow-none d:p-0">
               <h3 className="text-[18px]">{items.title}</h3>
               <div className="flex flex-col gap-3 text-[#b4b4b4] ">
                 {items.content.map((items) => (
@@ -17,7 +17,7 @@ const Footer = () => {
               </div>
             </div>
           ))}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 p:shadow-2xl  p:p-2 p:border rounded-md d:border-none d:shadow-none d:p-0">
             <h3 className="text-[18px]">Liên hệ</h3>
             <div className="flex flex-col gap-3 text-[#b4b4b4] ">
               <p className="text-[12px] hover:text-[#e5eaef] cursor-pointer ">
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center text-[14px] font-poppins font-normal py-5 bg-black">
+      <div className="flex justify-center text-center px-2 text-[14px] font-poppins font-normal py-5 bg-black">
         <p className="pr-2">©2023 All Rights reserved ADS Company</p>
         <p className="pl-2 border-l-[1px] border-gray-400">
           Designed by Thanh Dev ADS Company

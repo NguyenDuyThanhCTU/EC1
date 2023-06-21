@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="">
       <Section1 />
-      <div className="mx-12">
+      <div className="mx-12 d:block p:hidden">
         <Section2 />
         <Section3 />
         <Section4 />

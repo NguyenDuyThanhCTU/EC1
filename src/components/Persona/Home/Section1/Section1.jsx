@@ -7,9 +7,10 @@ const Section1 = () => {
         <img
           src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/chien-dich-thuong-hieu/2023/minh-con-co-nhau/MCCN_CorpWebHOMEPAGE_Main-banner-WEB_1366-x-560px_Couple.jpg"
           alt="img"
+          className=" d:h-full w-full p:h-[400px] object-cover object-center bg-center"
         />
       </div>
-      <div className="w-[556px] absolute p-10 bottom-32 right-40 bg-white rounded-3xl shadow-lg">
+      <div className="d:w-[556px] p:w-[90vw] absolute p-10 p:bottom-2 d:bottom-32 d:right-40 p:right-0 bg-white rounded-3xl shadow-lg">
         <h3 className="text-redPrimmary text-content">
           <strong className="text-black ">Mình còn</strong> cần nhau?
         </h3>

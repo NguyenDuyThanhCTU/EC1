@@ -13,12 +13,12 @@ const PersonaLayout = ({ children }) => {
         <Header Login={setIsLogin} />
       </div>
 
-      {/* <main className="mx-[250px] ">
+      <main className="d:mx-[250px] p:mx-2">
         {children}
         <div>
           <Footer />
         </div>
-      </main> */}
+      </main>
 
       <div className="z-40 fixed">
         <Hotline />

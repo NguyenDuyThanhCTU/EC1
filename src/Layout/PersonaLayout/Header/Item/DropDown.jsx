@@ -4,8 +4,8 @@ import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 const DropDown = ({ content, title }) => {
   const [DropDown, setDropDown] = useState(false);
   return (
-    <div className="p-4 mx-5">
-      <div className=" border-t border-gray-200 flex justify-between pt-5 items-center">
+    <div className="p-4  bg-white">
+      <div className=" border-t border-gray-200 flex justify-between pt-5 items-center mx-5">
         <h3 className="text-[20px] font-normal">{content}</h3>
         {DropDown ? (
           <AiOutlineUp
@@ -26,7 +26,7 @@ const DropDown = ({ content, title }) => {
       <div
         className={`${
           DropDown ? "h-auto" : "h-0"
-        } w-full duration-1000 bg-white overflow-hidden pt-2  font-thin text-[18px]`}
+        } w-full duration-1000 bg-none overflow-hidden pt-2 mx-5 font-thin text-[18px]`}
       >
         {title.map((items) => (
           <div className="mb-2">
