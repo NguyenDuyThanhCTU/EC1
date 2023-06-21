@@ -26,7 +26,7 @@ function Hotline() {
   return (
     <div className="fixed bottom-7 right-10 z-[9999px] box-border">
       <div className="flex items-center">
-        <div className="text-black font-semibold flex justify-start items-center rounded-full w-[250px]  h-[60px] bg-white shadow-2xl absolute right-5">
+        <div className="text-black font-semibold d:flex p:hidden justify-start items-center rounded-full w-[250px]  h-[60px] bg-white shadow-2xl absolute right-5">
           <a href="tel:0971706658">
             <span className="ml-5">Liên hệ với chúng tôi</span>
           </a>

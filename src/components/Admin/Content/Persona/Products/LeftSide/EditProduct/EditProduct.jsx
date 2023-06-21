@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { FaCloudUploadAlt } from "react-icons/fa";
-import { BrickSize } from "../../../../../Utils/Item";
-import Input from "../../../Item/Input";
-import { BrickType } from "../../../../../Utils/Item";
+import { BrickSize } from "../../../../../../../Utils/Item";
+import Input from "../../../../../Item/Input";
+import { BrickType } from "../../../../../../../Utils/Item";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getStorage } from "firebase/storage";
-import { useStateProvider } from "../../../../../Context/StateProvider";
+import { useStateProvider } from "../../../../../../../Context/StateProvider";
 import {
   addDocument,
   getDocumentsById,
-} from "../../../../../Config/Services/Firebase/FireStoreDB";
+} from "../../../../../../../Config/Services/Firebase/FireStoreDB";
 import { notification } from "antd";
 
 const EditProduct = (id) => {

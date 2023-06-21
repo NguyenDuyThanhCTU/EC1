@@ -9,7 +9,7 @@ import { ProductSidebarAdmin, WebsiteSidebarAdmin } from "../../../Utils/item";
 
 const Sidebar = () => {
   const { isSelected, setSelected } = useStateProvider();
-  console.log(isSelected);
+
   return (
     <div className="bg-black  h-screen text-white border-r border-gray-800">
       <div className="w-full flex items-center justify-center border-b border-gray-800 py-3">

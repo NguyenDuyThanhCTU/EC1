@@ -8,19 +8,19 @@ const PersonaLayout = ({ children }) => {
   const [isLogin, setIsLogin] = useState(false);
 
   return (
-    <div className="font-OpenSans bg-[#e8edef] relative w-[1920px]">
+    <div className="font-OpenSans bg-[#e8edef] relative w-screen">
       <div className="z-50 relative">
         <Header Login={setIsLogin} />
       </div>
 
-      <main className="mx-[250px] ">
+      {/* <main className="mx-[250px] ">
         {children}
         <div>
           <Footer />
         </div>
-      </main>
+      </main> */}
 
-      <div className="z-50 fixed">
+      <div className="z-40 fixed">
         <Hotline />
       </div>
     </div>

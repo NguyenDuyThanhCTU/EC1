@@ -87,27 +87,6 @@ export const HeaderItems = [
       },
     ],
   },
-  {
-    Content: "Cơ hội nghề nghiệp",
-    title: [
-      {
-        name: "Cơ hội nghề nghiệp tại Prudential",
-        link: "https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/",
-      },
-      {
-        name: "Cơ hội phát triển tại Kênh hợp tác kinh doanh",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-      {
-        name: "PRUPlanner – Chuyên viên hoạch định tài chính",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-      {
-        name: "Chuyên viên hoạch định tài chính Prudential - Kênh đại lý",
-        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
-      },
-    ],
-  },
 ];
 
 export const FooterItems = [
@@ -316,7 +295,7 @@ export const WebsiteSidebarAdmin = [
   },
 ];
 
-export const SocialMediaPersonaDashboard = [
+export const SocialMediaDashboard = [
   {
     title: "Trang zalo",
     icon: "SiZalo",

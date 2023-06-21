@@ -20,6 +20,9 @@ module.exports = {
         Blue3D: "#1D1D3D",
         colortopdownBlue: "#2c95ff",
         colortopdownGray: "#414045",
+        blueAdmin: "#74affc",
+        purpleAdmin: "#bb86fc37",
+        purpleHover: "#BB86FC",
       },
       fontSize: {
         content: "48px",

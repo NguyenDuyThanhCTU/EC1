@@ -3,11 +3,11 @@ import { FcViewDetails } from "react-icons/fc";
 import { FiEdit } from "react-icons/fi";
 import { MdDeleteForever } from "react-icons/md";
 import { TbCircleDashed } from "react-icons/tb";
-import { useStateProvider } from "../../../../../Context/StateProvider";
+import { useStateProvider } from "../../../../../../Context/StateProvider";
 import {
   delDocument,
   getProducts,
-} from "../../../../../Config/Services/Firebase/FireStoreDB";
+} from "../../../../../../Config/Services/Firebase/FireStoreDB";
 import { Popconfirm, message } from "antd";
 
 const LeftSide = () => {
@@ -51,7 +51,7 @@ const LeftSide = () => {
           className="relative group cursor-pointer"
           onClick={() => HandleProduct()}
         >
-          <p
+          {/* <p
             className={`absolute w-28 -top-24 -left-1 font-bold duration-75 ${
               isClick ? "text-white" : "text-black"
             } `}
@@ -64,7 +64,7 @@ const LeftSide = () => {
             } `}
           >
             Xem theo tên{" "}
-          </p>
+          </p> */}
           <div className="text-center border w-[90px] p-2 rounded-full group-hover:bg-BlueFF ">
             Loại <br /> sản phẩm
           </div>
@@ -77,7 +77,7 @@ const LeftSide = () => {
           Danh sách sản phẩm
         </h3>
         <div className="">
-          <div className=" py-2  ml-1 h-[281px] overflow-scroll">
+          <div className=" py-2  ml-1 h-[281px] overflow-y-scroll">
             {DataFetch?.map((data, idx) => (
               <div className="flex flex-row gap-5 items-center my-2  ml-1 ">
                 <div className="group relative ">

@@ -4,6 +4,10 @@ import { HiOutlineShoppingBag } from "react-icons/hi";
 import { HeaderItems } from "../../../Utils/item";
 import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { MdOutlineFormatListBulleted } from "react-icons/md";
+import { RxCross1 } from "react-icons/rx";
+import DropDown from "./Item/DropDown";
+import { BiUserCircle } from "react-icons/bi";
 
 const Header = () => {
   const [isSelected, setIsSelected] = useState(10);
@@ -56,7 +60,7 @@ const Header = () => {
     <div className="h-[126px] ">
       <div className="bg-white ">
         <div className=" bg-none h-[126px] relative  bg-white ">
-          <div className="mx-[400px] flex justify-between  items-center  italic text-[#1b365d] h-[92px] z-50">
+          <div className=" mx-[400px] p:hidden d:flex justify-between  items-center  italic text-[#1b365d] h-[92px] z-50">
             <Link to="/">
               <img
                 src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/trang-chu/prudential-logo-181x32.png"
@@ -72,10 +76,10 @@ const Header = () => {
               </a>
               <div className="">
                 <span className="border-2 rounded-l-3xl border-gray-200 px-3 py-1 w-[90px]">
-                  Cá nhân
+                  Người tìm việc
                 </span>
-                <span className="border-2 rounded-r-3xl bg-gray-200 px-1 py-1 w-[90px] text-gray-400">
-                  Doanh nghiệp
+                <span className="border-2 rounded-r-3xl bg-gray-200 px-2 py-1  text-gray-400">
+                  Nhà tuyển dụng
                 </span>
               </div>
               <div>
@@ -86,13 +90,54 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="flex flex-col 0">
+          <div className="p:block d:hidden w-full  h-[60px] ">
+            <div className="flex justify-end  items-center">
+              <img
+                src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/trang-chu/prudential-logo-181x32.png"
+                alt="logo"
+                className="h-[32px]"
+              />
+              <div className="flex items-center text-[60px]">
+                <BsSearch className="p-5" />
+                <BsFillTelephoneFill className="p-5" />
+                {Hidden ? (
+                  <RxCross1
+                    className="bg-redPrimmary text-white p-2 "
+                    onClick={() => setHidden(!Hidden)}
+                  />
+                ) : (
+                  <MdOutlineFormatListBulleted
+                    className="bg-redPrimmary text-white p-2 "
+                    onClick={() => setHidden(!Hidden)}
+                  />
+                )}
+              </div>
+            </div>
+            <div
+              className={`${
+                Hidden ? "h-screen" : "h-0 "
+              } w-full duration-700 bg-[rgba(253,253,253,0.9)] overflow-hidden`}
+            >
+              {HeaderItems.map((items) => (
+                <DropDown content={items.Content} title={items.title} />
+              ))}
+              <div className="mt-10">
+                <div className="border-2 rounded-md flex gap-1 items-center justify-center py-3 mx-5 text-[18px] italic text-[#1b365d] font-semibold">
+                  <BiUserCircle className="text-[25px]" />
+                  <p>Đăng nhập</p>
+                </div>
+              </div>
+              <div className=" h-full  w-full"></div>
+            </div>
+          </div>
+
+          <div className="d:flex flex-col p:hidden">
             <div
               className={`fixed z-50 ${
                 IsTranslate
                   ? "w-full bg-white text-black"
                   : "mx-[400px] w-[1103px] bg-redPrimmary text-white  "
-              }   duration-300 h-[69px] rounded-lg flex justify-center  items-center text-normal font-semibold gap-14`}
+              }   duration-300 h-[69px] rounded-lg flex justify-center  items-center text-normal font-semibold gap-20`}
               style={{ top: `${elementTop}px` }}
             >
               {/* <div
@@ -119,7 +164,7 @@ const Header = () => {
             </div>
 
             <div
-              className={`bg-white  z-0
+              className={`bg-white -z-10
               ${
                 Hidden
                   ? IsTranslate

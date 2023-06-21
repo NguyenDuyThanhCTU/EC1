@@ -14,7 +14,7 @@ const Contact = () => {
             <input
               placeholder={Phone}
               type="text"
-              className="px-4 py-2 text-black outline-none rounded-2xl bg-gray-300 bg-gray-300"
+              className="px-4 py-2 text-black outline-none rounded-2xl bg-gray-300 "
             />
             <button className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 rounded-xl">
               Cập nhật
@@ -42,9 +42,11 @@ const Contact = () => {
               placeholder={Adress}
             />
             <div>
-              <button className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 rounded-xl py-2">
-                Cập nhật
-              </button>
+              <div>
+                <button className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 py-2 rounded-xl">
+                  Cập nhật
+                </button>
+              </div>
             </div>
           </div>
         </div>
