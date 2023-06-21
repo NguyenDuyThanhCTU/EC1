@@ -3,6 +3,7 @@ import Contact from "./Webconfig/Contact/Contact";
 import Trademark from "./Webconfig/Trademark/Trademark";
 import SocialMedia from "./SocialMedia/SocialMedia";
 import Products from "./Products/Products";
+import Slide from "./Slide/Slide";
 
 const Persona = () => {
   const { isSelected } = useStateProvider();
@@ -14,7 +15,9 @@ const Persona = () => {
           <Trademark />
         </div>
       ) : isSelected === 1 ? (
-        <>1</>
+        <div className="p-5 px-10 flex justify-start gap-10">
+          <Slide />
+        </div>
       ) : isSelected === 2 ? (
         <div className="p-5 px-10 flex justify-start gap-10">
           <SocialMedia />
