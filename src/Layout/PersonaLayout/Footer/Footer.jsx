@@ -48,7 +48,7 @@ const Footer = () => {
         <p className="pl-2 border-l-[1px] border-gray-400">
           Designed by Thanh Dev ADS Company
         </p>
-      </div>{" "}
+      </div>
     </div>
   );
 };

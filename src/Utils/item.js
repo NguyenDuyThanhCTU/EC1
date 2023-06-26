@@ -1,5 +1,18 @@
 export const HeaderItems = [
   {
+    Content: "Trang chủ",
+    title: [
+      {
+        name: "Chiến dịch thương hiệu: Mình Còn Cần Nhau?",
+        link: "https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/",
+      },
+      {
+        name: "Lời giải đáp từ chuyên gia tâm lý",
+        link: " https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/loi-giai-dap-tu-chuyen-gia-tam-ly/",
+      },
+    ],
+  },
+  {
     Content: "Giới thiệu sản phẩm",
     title: [
       {

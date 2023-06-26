@@ -7,7 +7,7 @@ const DropDown = ({ content, title }) => {
     <div className="p-4  bg-white">
       <div className=" border-t border-gray-200 flex justify-between pt-5 items-center mx-5">
         <h3 className="text-[20px] font-normal">{content}</h3>
-        {DropDown ? (
+        {DropDown && title ? (
           <AiOutlineUp
             className="text-[25px] text-redPrimmary"
             onClick={() => {
