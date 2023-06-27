@@ -6,11 +6,7 @@ const Card = ({ image, title, content }) => {
     // <Link to={link}>
     <div className="bg-white hover:shadow-2xl rounded-2xl w-[366px]">
       <div className="relative">
-        <img
-          src={image}
-          alt="img"
-          className="w-full object-contain rounded-t-2xl"
-        />
+        <img src={image} alt="img" className=" object-contain rounded-t-2xl " />
       </div>
 
       <div className="py-6 px-5 flex  flex-col gap-3 justify-start">

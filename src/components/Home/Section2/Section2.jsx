@@ -20,7 +20,6 @@ const Section2 = () => {
           <div className="text-[#68737a] flex italic gap-3 cursor-pointer">
             {PersonaSection2.map((items, idx) => (
               <div>
-                {" "}
                 <a
                   className={` px-4 py-3 rounded-3xl  ${
                     isSelected === idx ? "bg-[#1b365d] text-white " : "bg-white"

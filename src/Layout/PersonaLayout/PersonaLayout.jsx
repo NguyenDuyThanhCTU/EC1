@@ -8,7 +8,7 @@ const PersonaLayout = ({ children }) => {
   const [isLogin, setIsLogin] = useState(false);
 
   return (
-    <div className="font-OpenSans bg-[#e8edef] relative w-screen">
+    <div className="font-OpenSans bg-[#e8edef] relative ">
       <div className="z-50 relative">
         <Header Login={setIsLogin} />
       </div>

@@ -104,12 +104,12 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="d:flex flex-col p:hidden">
+          <div className="d:flex flex-col p:hidden w-full  items-center">
             <div
               className={`fixed z-50 ${
                 IsTranslate
                   ? "w-full bg-white text-black"
-                  : "mx-[400px] w-[1103px] bg-redPrimmary text-white  "
+                  : " w-[1103px] bg-redPrimmary text-white  "
               }   duration-300 h-[69px] rounded-lg flex justify-center  items-center text-normal font-semibold gap-20`}
               style={{ top: `${elementTop}px` }}
             >
