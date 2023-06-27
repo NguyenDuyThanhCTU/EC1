@@ -1,13 +1,21 @@
 import React, { useState } from "react";
-import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
+// import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-const DropDown = ({ content, title }) => {
-  const [DropDown, setDropDown] = useState(false);
+const DropDown = ({ content, link, setHidden }) => {
+  // const [DropDown, setDropDown] = useState(false);
   return (
     <div className="p-4  bg-white">
       <div className=" border-t border-gray-200 flex justify-between pt-5 items-center mx-5">
-        <h3 className="text-[20px] font-normal">{content}</h3>
-        {DropDown && title ? (
+        <Link
+          to={link}
+          onClick={() => {
+            setHidden(false);
+          }}
+        >
+          <h3 className="text-[20px] font-normal">{content}</h3>
+        </Link>
+        {/* {DropDown && title ? (
           <AiOutlineUp
             className="text-[25px] text-redPrimmary"
             onClick={() => {
@@ -21,9 +29,9 @@ const DropDown = ({ content, title }) => {
               setDropDown(!DropDown);
             }}
           />
-        )}
+        )} */}
       </div>
-      <div
+      {/* <div
         className={`${
           DropDown ? "h-auto" : "h-0"
         } w-full duration-1000 bg-none overflow-hidden pt-2 mx-5 font-thin text-[18px]`}
@@ -33,7 +41,7 @@ const DropDown = ({ content, title }) => {
             <p>{items.name}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

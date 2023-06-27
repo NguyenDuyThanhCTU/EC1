@@ -89,14 +89,18 @@ const Header = () => {
               } w-full duration-700 bg-[rgba(253,253,253,0.9)] overflow-hidden`}
             >
               {HeaderItems.map((items) => (
-                <DropDown content={items.Content} title={items.title} />
+                <DropDown
+                  content={items.Content}
+                  link={items.link}
+                  setHidden={setHidden}
+                />
               ))}
-              <div className="mt-10">
+              {/* <div className="mt-10">
                 <div className="border-2 rounded-md flex gap-1 items-center justify-center py-3 mx-5 text-[18px] italic text-[#1b365d] font-semibold">
                   <BiUserCircle className="text-[25px]" />
                   <p>Đăng nhập</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
