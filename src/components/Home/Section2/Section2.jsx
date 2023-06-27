@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card from "./Card/Card";
+import Card from "../../Job/Section2/Card/Card";
 import { PersonaSection2 } from "../../../Utils/item";
 import { PersonaSection2Card } from "../../../routes/Temp";
 

@@ -115,14 +115,16 @@ const Header = () => {
           > */}
               {HeaderItems.map((items, idx) => (
                 <div className="relative">
-                  <button
-                    className=""
-                    onClick={() => {
-                      setIsSelected(idx);
-                    }}
-                  >
-                    {items.Content}
-                  </button>
+                  <Link to={items.link}>
+                    <button
+                      className=""
+                      onClick={() => {
+                        setIsSelected(idx);
+                      }}
+                    >
+                      {items.Content}
+                    </button>
+                  </Link>
                   <div
                     className={` ${
                       isSelected === idx
