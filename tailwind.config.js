@@ -23,6 +23,7 @@ module.exports = {
         blueAdmin: "#74affc",
         purpleAdmin: "#bb86fc37",
         purpleHover: "#BB86FC",
+        grayBg: "#dbe3e9",
       },
       fontSize: {
         content: "48px",

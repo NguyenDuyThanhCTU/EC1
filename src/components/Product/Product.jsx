@@ -1,14 +1,11 @@
 import React from "react";
-import { Button, Result } from "antd";
+import Section1 from "./Section1/Section1";
+import Section2 from "./Section2/Section2";
 const Product = () => {
   return (
     <div>
-      <Result
-        status="403"
-        title="Xin lỗi vì sự bất tiện này"
-        subTitle="Trang này đang bị khóa để chỉnh sửa"
-        extra={<Button type="primary ">Back Home</Button>}
-      />
+      <Section1 />
+      <Section2 />
     </div>
   );
 };

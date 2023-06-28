@@ -141,3 +141,74 @@ export const IntroSection2Items2 = [
       "https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/2%2F10.jpg?alt=media&token=4db0729d-83ac-4439-9eb3-304305ffa80e",
   },
 ];
+
+export const ProductSection2Items = [
+  {
+    title: "Gia tăng thêm quyền lợi và phạm vi bảo vệ",
+    content: "Bảo vệ và chăm sóc sức khỏe cho cả gia đình trên một hợp đồng.",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-nhan-tho/minh-hoa/minh-hoa-thu-tuc-tham-dinh-02-366x206.jpg",
+  },
+  {
+    title: "Mang đến giải pháp bảo hiểm toàn diện",
+    content:
+      "Linh hoạt đính kèm với các sản phẩm chính, đáp ứng nhiều nhu cầu bảo vệ khác nhau.",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-nhan-tho/minh-hoa/minh-hoa-chi-tra-nhan-tien-hoan-phi-02-366x206.jpg",
+  },
+  {
+    title: "Mức phí thấp, quyền lợi bảo hiểm cao",
+    content:
+      "Giúp tiết kiệm tối đa chi phí mà vẫn an tâm được bảo vệ nâng cao.",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-nhan-tho/minh-hoa/minh-hoa-huu-tri-02-366x206.jpg",
+  },
+];
+
+export const ProductSection2Card = [
+  {
+    title:
+      " Sản phẩm bảo hiểm tử kỳ Với quyền lợi bảo hiểm tình trạng tổn thương ",
+    content: " Bảo vệ “các hệ điều hành cơ thể” theo tình trạng tổn thương ",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-nhan-tho/ke-hoach-bao-ve/pru-thiet-thuc-banner-366x207.jpg",
+  },
+  {
+    title: " Bảo hiểm sức khỏe PRU-HÀNH TRANG VUI KHỎE ",
+    content: " Giải pháp chăm sóc sức khỏe và chi trả chi phí y tế thực tế. ",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-bo-tro/sp-pru-hanh-trang-vui-khoe-thumb-366x206.jpg",
+  },
+  {
+    title: " Bảo hiểm Tai nạn dành cho trẻ em ",
+    content: " Giải pháp bảo vệ trước rủi ro tai nạn dành cho trẻ em. ",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-bo-tro/sp-bao-hiem-tai-nan-danh-cho-tre-em-thumb-366x206.jpg",
+  },
+  {
+    title: " Bảo hiểm Bệnh hiểm nghèo dành cho trẻ em ",
+    content:
+      " Giải pháp bảo vệ tài chính trước rủi ro bệnh hiểm nghèo dành cho trẻ em. ",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-bo-tro/sp-bao-hiem-benh-hiem-ngheo-danh-cho-tre-em-thumb-366x206.jpg",
+  },
+  {
+    title: " Bảo hiểm Miễn đóng phí bệnh hiểm nghèo ",
+    content: " Giải pháp hỗ trợ đóng phí nếu không may mắc bệnh hiểm nghèo. ",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-bo-tro/sp-bao-hiem-mien-phi-dong-benh-hiem-ngheo-thumb-366x206.jpg",
+  },
+  {
+    title: " Bảo hiểm Miễn đóng phí bệnh lý nghiêm trọng ",
+    content:
+      " Giải pháp miễn đóng phí khi không may gặp rủi ro bệnh hiểm nghèo. ",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-bo-tro/sp-bao-hiem-mien-dong-phi-benh-ly-nghiem-trong-thumb-366x206.jpg",
+  },
+  {
+    title: " Bảo hiểm Bệnh hiểm nghèo từ giai đoạn đầu ",
+    content: " Giải pháp bảo vệ lên đến 77 bệnh hiểm nghèo. ",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-bo-tro/sp-bao-hiem-cham-soc-suc-khoe-thumb-366x206.jpg",
+  },
+];

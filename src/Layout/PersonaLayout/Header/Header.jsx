@@ -10,7 +10,7 @@ import DropDown from "./Item/DropDown";
 import { BiUserCircle } from "react-icons/bi";
 
 const Header = () => {
-  const [isSelected, setIsSelected] = useState(1);
+  const [isSelected, setIsSelected] = useState(0);
   const [Hidden, setHidden] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [elementTop, setElementTop] = useState(95);

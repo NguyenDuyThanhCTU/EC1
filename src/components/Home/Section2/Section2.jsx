@@ -9,7 +9,7 @@ const Section2 = () => {
     <div className="relative ">
       <div className="flex  relative">
         <div className="flex-1"></div>
-        <div className="flex-1 h-[900px] bg-slate-200"></div>
+        <div className="flex-1 h-[900px] bg-grayBg"></div>
       </div>
 
       <div className="flex flex-col  absolute top-16  w-full items-center gap-16">

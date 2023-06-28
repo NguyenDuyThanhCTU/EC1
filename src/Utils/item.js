@@ -352,3 +352,21 @@ export const JobSection2Card = [
       "Thành công của chúng tôi được tạo ra từ những giá trị cốt lõi, những giá trị thể hiện sâu sắc và rõ ràng nhất chúng tôi là ai - Khát vọng, Hiếu kì, Đồng cảm, Can đảm và Sắc bén.",
   },
 ];
+
+export const ProductSection2 = [
+  {
+    name: "Bệnh hiểm nghèo    ",
+  },
+  {
+    name: "Chăm sóc sức khỏe",
+  },
+  {
+    name: "Tai nạn",
+  },
+  {
+    name: "Tình trạng tổn thương theo mức độ",
+  },
+  {
+    name: "Tử vong và thương tật",
+  },
+];

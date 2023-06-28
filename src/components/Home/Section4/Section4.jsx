@@ -26,7 +26,7 @@ const Section4 = () => {
                   <a
                     className={` px-4 py-3 rounded-3xl  ${
                       isSelected === idx
-                        ? "bg-[#1b365d] text-white "
+                        ? "bg-[#1b365d]  text-white "
                         : "bg-white"
                     }`}
                     onClick={() => setIsSelected(idx)}

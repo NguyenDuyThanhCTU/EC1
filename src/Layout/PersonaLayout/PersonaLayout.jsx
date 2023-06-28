@@ -13,7 +13,7 @@ const PersonaLayout = ({ children }) => {
         <Header Login={setIsLogin} />
       </div>
 
-      <main className="d:mx-[250px] p:mx-2">
+      <main className="d:mx-[250px] p:mx-0">
         {children}
         <div>
           <Footer />
