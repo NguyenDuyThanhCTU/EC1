@@ -28,7 +28,17 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Giới thiệu sản phẩm",
+    Content: "Huỳnh Thanh Nam",
+    link: "/introduction",
+    title: [
+      {
+        name: "Kế hoạch bảo vệ & chăm sóc sức khỏe",
+        link: "https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/",
+      },
+    ],
+  },
+  {
+    Content: "Kế hoạch đảm bảo rủi ro tài chính",
     link: "/products",
     title: [
       {
@@ -47,18 +57,9 @@ export const HeaderItems = [
       },
     ],
   },
+
   {
-    Content: "Giới thiệu",
-    link: "/introduction",
-    title: [
-      {
-        name: "Kế hoạch bảo vệ & chăm sóc sức khỏe",
-        link: "https://www.prudential.com.vn/vi/chien-dich-thuong-hieu/minh-con-can-nhau/",
-      },
-    ],
-  },
-  {
-    Content: "Liên hệ",
+    Content: "Tư vấn miễn phí",
     link: "/contact",
     title: [
       {
@@ -368,5 +369,40 @@ export const ProductSection2 = [
   },
   {
     name: "Tử vong và thương tật",
+  },
+];
+
+export const HomeSection6Card = [
+  {
+    title: "Về tập đoàn Prudential",
+    content:
+      "Tập đoàn Prudential là một trong những tập đoàn tài chính hàng đầu thế giới, cung cấp các sản phẩm bảo hiểm nhân thọ, dịch vụ tài chính và quản lý tài sản tại Vương quốc Anh, Mỹ và Châu Á.",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/ve-prudential/2020/ve-prudential-tap-doan-desktop-266x354.jpg",
+    link: "https://www.prudential.com.vn/vi/tim-hieu-ve-prudential-viet-nam/tap-doan-prudential/",
+  },
+  {
+    title: "Lịch sử phát triển Prudential Việt Nam",
+    content:
+      "Với tuyên ngôn thương hiệu “Lắng nghe. Thấu Hiểu. Hành động.”, Prudential khẳng định cam kết luôn đặt khách hàng làm trọng tâm trong suốt quá trình hoạt động.",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/ve-prudential/2020/ve-prudential-lich-su-phat-trien-desktop-266x354.jpg",
+    link: "https://www.prudential.com.vn/vi/tim-hieu-ve-prudential-viet-nam/lich-su-phat-trien/",
+  },
+  {
+    title: "Thành tích và Giải thưởng",
+    content:
+      "Với những nỗ lực và đóng góp tích cực tại Việt Nam, Prudential vinh dự được trao tặng nhiều giải thưởng và danh hiệu cao quý.",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/ve-prudential/2020/ve-prudential-thanh-tich-giai-thuong-desktop-266x354.jpg",
+    link: "https://www.prudential.com.vn/vi/tim-hieu-ve-prudential-viet-nam/thanh-tich-giai-thuong/",
+  },
+  {
+    title: "Báo cáo tài chính",
+    content:
+      "Tham khảo Báo cáo tài chính được cập nhật hàng năm của Prudential Việt Nam.",
+    image:
+      "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/ve-prudential/2020/ve-prudential-bao-cao-tai-chinh-desktop-266x354.jpg",
+    link: "https://www.prudential.com.vn/vi/tim-hieu-ve-prudential-viet-nam/bao-cao-tai-chinh/",
   },
 ];

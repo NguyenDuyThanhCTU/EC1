@@ -212,3 +212,24 @@ export const ProductSection2Card = [
       "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/san-pham-bao-hiem-bo-tro/sp-bao-hiem-cham-soc-suc-khoe-thumb-366x206.jpg",
   },
 ];
+
+export const HomeSection7Videos = [
+  {
+    link: "https://www.youtube.com/embed/OzKjJsxJkbE",
+  },
+  {
+    link: "https://www.youtube.com/embed/9-JqPdeoffE",
+  },
+  {
+    link: "https://www.youtube.com/embed/VaS8OuHHOXY",
+  },
+  {
+    link: "https://www.youtube.com/embed/cEkyfHbP2y8",
+  },
+  {
+    link: "https://www.youtube.com/embed/VaS8OuHHOXY",
+  },
+  {
+    link: "https://www.youtube.com/embed/OzKjJsxJkbE",
+  },
+];
