@@ -26,13 +26,21 @@ const Section1 = () => {
 
         <div>
           <div className="flex  gap-3 bg-white text-black rounded-full items-center d:py-5 p:py-2  d:px-10 p:px-4 d:text-[28px] p:text-[13px] absolute top-0 d:left-48 p:left-0 shadow-lg">
-            <FcCollaboration />
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/image%2Fz4471738596071_a3102ec7366d50cbfb0894882fbba5ec.jpg?alt=media&token=c73ecf64-1de6-41c7-bd05-172493961527"
+              alt="img"
+              className="w-10"
+            />
             <p>MDRT</p>
           </div>
         </div>
         <div>
           <div className="flex  gap-3 bg-white text-black rounded-full items-center d:py-5 p:py-2  d:px-10 p:px-4 d:text-[28px] p:text-[13px] absolute bottom-0 d:left-48 p:left-0 shadow-lg">
-            <BiUserVoice />
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/image%2F1.jpg?alt=media&token=8d1220f0-136b-43eb-b461-8e964eca4a78"
+              alt="img"
+              className="w-10"
+            />
             <p>Pru Elite</p>
           </div>
         </div>
