@@ -7,14 +7,12 @@ import Section5 from "./Section5/Section5";
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Section1 />
-      <div className="mx-12 d:block p:hidden">
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-      </div>
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 />
     </div>
   );
 };

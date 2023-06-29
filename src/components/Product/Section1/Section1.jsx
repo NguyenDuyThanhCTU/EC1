@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Card from "../../Job/Section2/Card/Card";
 import { ProductSection2Items } from "../../../Utils/temp";
+import Card from "../../Item/Card";
 
 const Section1 = () => {
   return (

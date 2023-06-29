@@ -20,7 +20,7 @@ const Section1 = () => {
           phúc bền lâu. Khi nào ta còn cho nhau được thứ người kia cần, khi nào
           ta còn cảm thấy cần nhau, thì khi ấy gia đình mới bền vững.{" "}
         </p>
-        <div className="font-bold bg-redPrimmary hover:scale-110 duration-300 hover:shadow-2xl  text-white w-[150px] rounded-3xl py-3 px-6 ">
+        <div className="font-bold bg-redPrimmary hover:scale-110 duration-300 hover:shadow-2xl  text-white w-[150px] rounded-3xl py-3 px-6 cursor-pointer">
           Xem chi tiết
         </div>
       </div>

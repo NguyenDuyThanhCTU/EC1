@@ -3,9 +3,9 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const Section3 = () => {
   return (
-    <div className="flex flex-col gap-32 pb-20">
-      <div className="flex justify-center gap-44 items-center ">
-        <div className="  w-[500px] flex flex-col gap-2">
+    <div className="flex flex-col gap-32 pb-20 p-2">
+      <div className="flex justify-center d:gap-44 p:gap-5 items-center d:flex-row p:flex-col">
+        <div className="p:w-auto  d:w-[500px] flex flex-col gap-2">
           <h3 className="text-content">
             <strong>Kết nối, Phát triển, Thành Công</strong>
           </h3>
@@ -21,13 +21,13 @@ const Section3 = () => {
         </div>
         <div>
           <img
-            className="w-[630px]"
+            className="p:w-auto d:w-[630px]"
             src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/co-hoi-nghe-nghiep/2021/connect-grow-succeed-666x444.jpg"
             alt="img"
           />
         </div>
       </div>
-      <div className="flex justify-center gap-44  items-center">
+      <div className="flex justify-center gap-44 p:gap-5 items-center  d:flex-row p:flex-col">
         <div>
           <img
             className="w-[630px]"
@@ -35,7 +35,7 @@ const Section3 = () => {
             alt="img"
           />
         </div>
-        <div className="  w-[500px] flex flex-col gap-2">
+        <div className=" p:w-auto d:w-[500px] flex flex-col gap-2">
           <h3 className="text-content">
             <strong>Khám phá cơ hội tuyển dụng tại Prudential Việt Nam</strong>
           </h3>
@@ -49,8 +49,8 @@ const Section3 = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center gap-44 items-center ">
-        <div className="  w-[500px] flex flex-col gap-2">
+      <div className="flex justify-center d:gap-44 p:gap-5  d:flex-row p:flex-col items-center ">
+        <div className="p:w-auto  d:w-[500px] flex flex-col gap-2">
           <h3 className="text-content">
             <strong>Đoàn kết thông qua tinh thần đồng đội</strong>
           </h3>
@@ -64,7 +64,7 @@ const Section3 = () => {
         </div>
         <div>
           <img
-            className="w-[630px]"
+            className=" w-[630px]"
             src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/co-hoi-nghe-nghiep/2021/united-through-teamwork-666x444.jpg"
             alt="img"
           />

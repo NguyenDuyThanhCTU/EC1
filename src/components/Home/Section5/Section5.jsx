@@ -4,15 +4,15 @@ import { BsArrowRightShort } from "react-icons/bs";
 const Section5 = () => {
   return (
     <div className="flex flex-col gap-32 pb-20">
-      <div className="flex justify-between items-center ">
-        <div className="  w-[500px] flex flex-col gap-2">
+      <div className="flex justify-between items-center d:flex-row p:flex-col p-2">
+        <div className="p:w-auto  d:w-[500px] flex flex-col gap-2">
           <h3 className="text-content">
             <strong>Pulse</strong> Sống Cân Bằng
           </h3>
           <p className="text-[48px] font-light">
             Chủ động đặt hẹn với chuyên viên tài chính Prudential
           </p>
-          <div className="flex items-center gap-1 font-bold text-normal">
+          <div className="flex items-center gap-1 font-bold text-normal cursor-pointer">
             <p>Xem chi tiết</p>{" "}
             <BsArrowRightShort className="text-redPrimmary text-[40px]" />
           </div>
@@ -25,7 +25,7 @@ const Section5 = () => {
           />
         </div>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center d:flex-row p:flex-col p-2">
         <div>
           <img
             className="w-[630px]"
@@ -33,7 +33,7 @@ const Section5 = () => {
             alt="img"
           />
         </div>
-        <div className="  w-[500px] flex flex-col gap-2">
+        <div className=" p:w-auto  d:w-[500px] flex flex-col gap-2">
           <h3 className="text-content">
             <strong>Phát triển</strong> cộng đồng bền vững
           </h3>
@@ -44,7 +44,7 @@ const Section5 = () => {
             dân Việt Nam, tập trung vào các lĩnh vực Giáo dục, Sống khỏe và An
             toàn.
           </p>
-          <div className="flex items-center gap-1 font-bold text-normal">
+          <div className="flex items-center gap-1 font-bold text-normal cursor-pointer">
             <p>Xem chi tiết</p>{" "}
             <BsArrowRightShort className="text-redPrimmary text-[40px]" />
           </div>

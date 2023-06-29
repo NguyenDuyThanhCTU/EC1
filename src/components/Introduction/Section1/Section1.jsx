@@ -20,42 +20,42 @@ const Section1 = () => {
           <img
             src="https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/1%2F11.jpg?alt=media&token=3450ba39-9bf7-42b7-aa1c-95ae70320791"
             alt="avatar"
-            className="rounded-full shadow-xl h-[500px] w-[500px] object-cover object-top"
+            className="rounded-full shadow-xl d:h-[500px] d:w-[500px] object-cover object-top p:w-[250px] p:h-[250px]"
           />
         </div>
 
         <div>
-          <div className="flex  gap-3 bg-white text-black rounded-full items-center py-5  px-10 text-[28px] absolute top-0 left-48 shadow-lg">
+          <div className="flex  gap-3 bg-white text-black rounded-full items-center d:py-5 p:py-2  d:px-10 p:px-4 d:text-[28px] p:text-[13px] absolute top-0 d:left-48 p:left-0 shadow-lg">
             <FcCollaboration />
             <p>MDRT</p>
           </div>
         </div>
         <div>
-          <div className="flex  gap-3 bg-white text-black rounded-full items-center py-5  px-10 text-[28px] absolute bottom-0 left-48 shadow-lg">
+          <div className="flex  gap-3 bg-white text-black rounded-full items-center d:py-5 p:py-2  d:px-10 p:px-4 d:text-[28px] p:text-[13px] absolute bottom-0 d:left-48 p:left-0 shadow-lg">
             <BiUserVoice />
             <p>Pru Elite</p>
           </div>
         </div>
         <div>
-          <div className="flex  gap-3 bg-white text-black rounded-full items-center py-5  px-10 text-[28px] absolute top-[40%] left-20">
+          <div className="flex  gap-3 bg-white text-black rounded-full items-center d:py-5 p:py-2  d:px-10 p:px-4 d:text-[28px] p:text-[13px] absolute top-[40%] d:left-20 p:left-4">
             <GiLifeBar />
             <p>Life Club</p>
           </div>
         </div>
         <div>
-          <div className="flex  gap-3 bg-white text-black rounded-full items-center py-5  px-10 text-[28px] absolute top-0 right-24 shadow-lg">
+          <div className="flex  gap-3 bg-white text-black rounded-full items-center d:py-5 p:py-2  d:px-10 p:px-4 d:text-[28px] p:text-[13px] absolute top-0 d:right-24 p:right-0 shadow-lg">
             <GiBlackKnightHelm />
             <p>Pru Service Mark</p>
           </div>
         </div>
         <div>
-          <div className="flex  gap-3 bg-white text-black rounded-full items-center py-5  px-10 text-[28px] absolute bottom-0 right-24 shadow-lg">
+          <div className="flex  gap-3 bg-white text-black rounded-full items-center d:py-5 p:py-2  d:px-10 p:px-4 d:text-[28px] p:text-[13px] absolute bottom-0 d:right-24 p:right-0 shadow-lg">
             <FcStatistics />
             <p>Pru Champion</p>
           </div>
         </div>
         <div>
-          <div className="flex  gap-3 bg-white text-black rounded-full items-center py-5  px-10 text-[28px] absolute top-[40%] right-16">
+          <div className="flex  gap-3 bg-white text-black rounded-full items-center d:py-5 p:py-2  d:px-10 p:px-4 d:text-[28px] p:text-[13px] absolute top-[40%] d:right-16 p:right-4">
             <FcBusinessman />
             <p>Alpha Leader</p>
           </div>
@@ -69,7 +69,7 @@ const Section1 = () => {
           <p className="font-medium text-[60px] leading-[72px] ">
             Gương mặt <strong>Prudential</strong> Million Dollar Round Table
           </p>
-          <p className="text-[20px] text-gray-500">
+          <p className="text-[20px] text-gray-500 px-2">
             Xin chào! Tôi là một Gương mặt Prudential Million Dollar Round Table
             (MDRT), chuyên về tư vấn và giải pháp bảo hiểm luôn cam kết hỗ trợ
             khách hàng đạt được mục tiêu tài chính và bảo vệ cho tương lai của
@@ -77,8 +77,8 @@ const Section1 = () => {
           </p>
         </div>
       </div>
-      <div className="mt-20 border border-gray-300 rounded-xl shadow-2xl">
-        <div className="p-5 flex justify-between items-center ">
+      <div className="mt-20 border border-gray-300 rounded-xl shadow-2xl ">
+        <div className="p-5 flex justify-between items-center d:flex-row p:flex-col gap-10 ">
           <div className="">
             <h3 className="text-[15px] mb-2 text-gray-400">Contact me</h3>
             <div className="flex gap-5 text-[40px]  cursor-pointer w-[310px]">
