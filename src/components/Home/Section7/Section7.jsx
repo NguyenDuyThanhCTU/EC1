@@ -34,7 +34,7 @@ const Section7 = () => {
         </p>
       </div>
       <div className="my-20 w-full bg-white ">
-        <div className="flex  justify-center p-5">
+        <div className="d:flex  justify-center p-5 p:hidden">
           <Swiper
             slidesPerView={3}
             loop={true}
@@ -61,9 +61,36 @@ const Section7 = () => {
             ))}
           </Swiper>
         </div>
+        <div className="d:hidden  justify-center p-5 p:flex">
+          <Swiper
+            slidesPerView={1}
+            loop={true}
+            spaceBetween={30}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            className="mySwiper "
+          >
+            {HomeSection7Videos.map((items) => (
+              <SwiperSlide>
+                <iframe
+                  width="400"
+                  height="300"
+                  src={items.link}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
       <div className="flex flex-col gap-5">
-        <div className="text-[18px] font-normal bg-white px-10 mr-28 rounded-lg">
+        <div className="text-[18px] font-normal bg-white px-10 d:mr-28 p:mr-0 rounded-lg">
           <div
             className="text-[20px] font-bold py-10 cursor-pointer flex justify-between items-center"
             onClick={() => HandleDropdown(1)}
@@ -79,7 +106,7 @@ const Section7 = () => {
           </div>
           <div
             className={`flex flex-col gap-5  duration-700 overflow-y-hidden ${
-              DropDown === 1 ? "  h-[500px]" : " h-[0px]"
+              DropDown === 1 ? "  d:h-[500px] p:h-[1500px]" : " h-[0px]"
             }`}
           >
             <p>
@@ -132,7 +159,7 @@ const Section7 = () => {
             </div>
           </div>
         </div>
-        <div className="text-[18px] font-normal bg-white px-10 mr-28 rounded-lg">
+        <div className="text-[18px] font-normal bg-white px-10 d:mr-28 p:mr-0 rounded-lg">
           <div
             className="text-[20px] font-bold py-10 cursor-pointer flex justify-between items-center"
             onClick={() => HandleDropdown(2)}
@@ -148,7 +175,7 @@ const Section7 = () => {
           </div>
           <div
             className={`flex flex-col gap-5  duration-700 overflow-y-hidden ${
-              DropDown === 2 ? "  h-[870px]" : " h-[0px]"
+              DropDown === 2 ? "  d:h-[870px] p:h-[1600px]" : " h-[0px]"
             }`}
           >
             <div className="flex  justify-center">

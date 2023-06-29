@@ -37,7 +37,7 @@ const Section6 = () => {
           </div>
         </div>
       </div>
-      <div className="mx-40 flex flex-col my-20 text-[18px] gap-5">
+      <div className="d:mx-40 p:mx-2 flex flex-col my-20 text-[18px] gap-5">
         <p>
           Công ty TNHH Bảo hiểm nhân thọ Prudential Việt Nam (“Prudential”) được
           thành lập và hoạt động theo Giấy phép thành lập và hoạt động số 15
@@ -66,14 +66,14 @@ const Section6 = () => {
         </p>
       </div>
       <div>
-        <div className="grid grid-cols-2 gap-36 mx-36 mb-20">
+        <div className="d:grid grid-cols-2 gap-36 mx-36 mb-20 p:flex flex-col items-center">
           {HomeSection6Card.map((items) => (
             <Link to={items.link}>
-              <div className="flex items-center w-[556px] bg-white rounded-xl shadow-xl relative">
+              <div className="flex items-center d:w-[556px] bg-white rounded-xl shadow-xl relative p:p-2 d:p-0 p:w-screen">
                 <img
                   src={items.image}
                   alt="img"
-                  className="w-[266px] h-[354px]"
+                  className="d:w-[266px] h-[354px] p:w-[166px] rounded-l-xl"
                 />
                 <div className=" py-4 px-8">
                   <h3 className="text-[24px] font-bold">{items.title}</h3>

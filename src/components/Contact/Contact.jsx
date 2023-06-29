@@ -10,7 +10,7 @@ const Contact = () => {
   const [Feedback, setFeedback] = useState("");
 
   const HandleSubmit = () => {
-    if (!name || !email || !phone || !Feedback) {
+    if (!name || !phone || !Feedback) {
       notification["error"]({
         message: "Lỗi",
         description: `Vui lòng nhập đầy đủ THÔNG TIN`,
@@ -84,7 +84,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-col gap-3 mb-5">
               <Input placeholder="Họ Tên(*)" setData={setName} />
-              <Input placeholder="Email(*)" setData={setEmail} />
+              <Input placeholder="Email" setData={setEmail} />
               <Input placeholder="Điện thoại(*)" setData={setPhone} />
               <textarea
                 placeholder="Hãy cho tôi biết câu hỏi hoặc phản hồi của bạn(*)"
