@@ -28,7 +28,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Tôi là Nam Pru",
+    Content: "Tôi là NAM PRU",
     link: "/introduction",
     title: [
       {
@@ -38,7 +38,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Tham gia Bảo hiểm cùng nam Pru",
+    Content: "Tham gia Bảo hiểm cùng NAM PRU",
     link: "/products",
     title: [
       {
@@ -48,7 +48,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Phát triển Sự nghiệp cùng Nam Pru",
+    Content: "Phát triển Sự nghiệp cùng NAM PRU",
     link: "/jobs",
     title: [
       {
