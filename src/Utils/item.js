@@ -28,7 +28,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Huỳnh Thanh Nam",
+    Content: "Tôi là Nam Pru",
     link: "/introduction",
     title: [
       {
@@ -38,7 +38,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Kế hoạch đảm bảo rủi ro tài chính",
+    Content: "Tham gia Bảo hiểm cùng nam Pru",
     link: "/products",
     title: [
       {
@@ -48,7 +48,7 @@ export const HeaderItems = [
     ],
   },
   {
-    Content: "Cơ hội nghề nghiệp",
+    Content: "Phát triển Sự nghiệp cùng Nam Pru",
     link: "/jobs",
     title: [
       {
@@ -59,7 +59,7 @@ export const HeaderItems = [
   },
 
   {
-    Content: "Tư vấn miễn phí",
+    Content: "Thông tin liên hệ",
     link: "/contact",
     title: [
       {

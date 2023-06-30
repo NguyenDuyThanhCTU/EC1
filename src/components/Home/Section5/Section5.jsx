@@ -4,7 +4,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 const Section5 = () => {
   return (
     <div className="flex flex-col gap-32 pb-20">
-      <div className="flex justify-between items-center d:flex-row p:flex-col p-2">
+      <div className="p:flex  items-center d:flex-row p:flex-col p-2 gap-36 justify-center">
         <div className="p:w-auto  d:w-[500px] flex flex-col gap-2">
           <h3 className="text-content">
             <strong>Pulse</strong> Sống Cân Bằng
@@ -19,16 +19,16 @@ const Section5 = () => {
         </div>
         <div>
           <img
-            className="w-[630px]"
+            className="w-[630px] rounded-xl"
             src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/trang-chu/promo-matchbook-666x444.jpg"
             alt="img"
           />
         </div>
       </div>
-      <div className="flex justify-between items-center d:flex-row p:flex-col p-2">
+      <div className="p:flex  items-center d:flex-row p:flex-col p-2 gap-36 justify-center">
         <div>
           <img
-            className="w-[630px]"
+            className="w-[630px] rounded-xl"
             src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/trach-nhiem-xa-hoi/csr-hero-666x444.jpg"
             alt="img"
           />

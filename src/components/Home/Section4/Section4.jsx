@@ -56,14 +56,15 @@ const Section4 = () => {
         </div>
       </div>
 
-      <div className="relative p:flex flex-col d:block p-2">
-        <div className="d:ml-24 p:ml-0">
+      <div className=" p:flex  d:grid cols-2 p-2  items-center gap-10">
+        <div className="d:ml-24 p:ml-0 ">
           <img
             src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/pulse-nhip-song-khoe/tim-hieu-pulse/pulse-promotion-desktop-vietnam-new_756x680.jpg"
             alt="img"
+            className="rounded-xl"
           />
         </div>
-        <div className="d:absolute  p:static right-6 top-72 d:w-[500px] p:w-auto flex flex-col gap-5">
+        <div className="  d:w-[500px] p:w-auto flex flex-col gap-5">
           <h3 className="text-content">
             <strong>Pulse</strong> Sống Cân Bằng
           </h3>

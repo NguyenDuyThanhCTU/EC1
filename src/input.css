@@ -151,5 +151,8 @@
    
   }
   
+  .cols-2{
+    grid-template-columns: 60% 40%;
+  }
 
   

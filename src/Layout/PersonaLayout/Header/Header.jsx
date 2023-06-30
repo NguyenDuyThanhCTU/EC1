@@ -43,30 +43,32 @@ const Header = () => {
     <div className="h-[126px] ">
       <div className="bg-white ">
         <div className=" bg-none h-[126px] relative  bg-white ">
-          <div className=" mx-[400px] p:hidden d:flex justify-between  items-center  italic text-[#1b365d] h-[92px] z-50">
-            <div className="flex items-center gap-2">
-              <Link to="/">
+          <div className=" w-full   italic text-[#1b365d] h-[92px] z-50 flex justify-center">
+            <div className="p:hidden d:flex justify-between  items-center w-[1100px]">
+              <div className="flex items-center gap-2">
+                <Link to="/">
+                  <img
+                    src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/trang-chu/prudential-logo-181x32.png"
+                    alt="img"
+                    className="w-[200px]"
+                  />
+                </Link>
+                <Link to="/">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/image%2FLOGO%20PPZ%20(2).png?alt=media&token=de5efebb-1f61-425f-992d-523cf8380aec"
+                    alt="img"
+                    className="w-[150px]"
+                  />
+                </Link>
+              </div>
+              <div>
                 <img
-                  src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/trang-chu/prudential-logo-181x32.png"
-                  alt="img"
-                  className="w-[250px]"
-                />
-              </Link>
-              <Link to="/">
-                <img
-                  src="https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/image%2FLOGO%20PPZ%20(2).png?alt=media&token=de5efebb-1f61-425f-992d-523cf8380aec"
-                  alt="img"
-                  className="w-[200px]"
-                />
-              </Link>
-            </div>
-            <div>
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/image%2FOP%202%20Hinh%20Trong%20Suot%20(4).png?alt=media&token=7249569c-264b-4232-aa68-c2a387acc618
+                  src="https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/image%2FOP%202%20Hinh%20Trong%20Suot%20(4).png?alt=media&token=7249569c-264b-4232-aa68-c2a387acc618
               "
-                alt="logo"
-                className="h-[92px]"
-              />
+                  alt="logo"
+                  className="h-[92px]"
+                />
+              </div>
             </div>
           </div>
 
@@ -119,8 +121,8 @@ const Header = () => {
               className={`fixed z-50 ${
                 IsTranslate
                   ? "w-full bg-white text-black"
-                  : " w-[1103px] bg-redPrimmary text-white  "
-              }   duration-300 h-[69px] rounded-lg flex justify-center px-10  items-center text-normal font-semibold gap-10`}
+                  : " w-[1203px] bg-redPrimmary text-white  "
+              }   duration-300 h-[69px] rounded-lg flex justify-center px-5  items-center text-normal font-semibold gap-10`}
               style={{ top: `${elementTop}px` }}
             >
               {/* <div
@@ -131,7 +133,6 @@ const Header = () => {
                 <div className="relative">
                   <Link to={items.link}>
                     <button
-                      className=""
                       onClick={() => {
                         setIsSelected(idx);
                       }}

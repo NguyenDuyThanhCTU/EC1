@@ -4,7 +4,7 @@ import React from "react";
 const Card = ({ image, title, content }) => {
   return (
     // <Link to={link}>
-    <div className="bg-white hover:shadow-2xl rounded-2xl w-[366px] cursor-pointer">
+    <div className="bg-white hover:shadow-2xl rounded-2xl w-[80%] cursor-pointer">
       <div className="relative">
         <img src={image} alt="img" className=" object-contain rounded-t-2xl " />
       </div>
