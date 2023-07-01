@@ -4,7 +4,7 @@ import Card from "../../Item/Card";
 
 const Section2 = () => {
   return (
-    <div className="relative mb-60">
+    <div className="relative d:mb-60 p:mb-20">
       <div className="w-[556px] h-[226px] bg-[#d5dce3] d:block p:hidden"></div>
       <div className="bg-white rounded-2xl p:w-auto d:w-[1166px] p:relative d:absolute top-10 d:left-20 p:left-0">
         <div className="flex flex-col gap-2 p-10 ">
@@ -41,7 +41,7 @@ const Section2 = () => {
               gì?
             </h3>
           </div>
-          <div className="d:grid grid-cols-3 gap-0 w-full p:flex flex-col items-center">
+          <div className="d:grid grid-cols-3 d:gap-0 p:gap-5 w-full p:flex flex-col items-center">
             {JobSection2Card.slice(0, 3).map((items) => (
               <>
                 <Card

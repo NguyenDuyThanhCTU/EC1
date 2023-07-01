@@ -18,25 +18,23 @@ const Section1 = () => {
       </div>
 
       <div className=" d:mt-20 p:ml-0 p:mt-5 w-full ">
-        <div className="mx-4 flex flex-col w-full items-center  gap-5">
-          <div className="flex justify-between w-full pr-16">
-            <h3 className="p:text-[40px] d:text-content font-thin">
+        <div className="d:mx-4 p:mx-0  flex flex-col items-start gap-5  ">
+          <div className="">
+            <h3 className="p:text-[40px] d:text-content font-thin p-2">
               <strong className="font-bold">Vì sao chọn sản phẩm</strong> <br />{" "}
               Bảo hiểm bổ trợ?
             </h3>
           </div>
-          <div className="d:flex-row p:flex-col flex justify-center gap-20 w-full">
+          <div className="d:flex-row p:flex-col flex justify-center items-center p:gap-5 d:gap-14 w-full">
             {ProductSection2Items.slice(0, 3).map((items) => (
-              <div className="d:w-[366px] p:w-[330px]">
-                <Card
-                  image={items.image}
-                  date={items.date}
-                  type={items.type}
-                  title={items.title}
-                  content={items.content}
-                  link={items.link}
-                />
-              </div>
+              <Card
+                image={items.image}
+                date={items.date}
+                type={items.type}
+                title={items.title}
+                content={items.content}
+                link={items.link}
+              />
             ))}
           </div>
         </div>

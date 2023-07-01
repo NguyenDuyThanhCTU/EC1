@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Hotline from "./PopUp/Hotline";
+import OnTop from "./PopUp/OnTop";
 
 const PersonaLayout = ({ children }) => {
   const [isLogin, setIsLogin] = useState(false);
@@ -18,6 +19,9 @@ const PersonaLayout = ({ children }) => {
       </div>
       <div className="z-40 fixed">
         <Hotline />
+      </div>
+      <div className="d:hidden p:block">
+        <OnTop />
       </div>
     </div>
   );
