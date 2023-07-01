@@ -2,7 +2,7 @@ import React from "react";
 import { FooterItems } from "../../../Utils/item";
 const Footer = () => {
   return (
-    <div className=" bg-primary font-LexendDeca text-white">
+    <div className=" bg-primary font-LexendDeca text-white d:w-[1420px] p:w-auto ">
       <div className=" bg-[#1f1f1f]">
         <div className="grid d:grid-cols-6 p:grid-cols-2 text-[#e5eaef] d:gap-10 p:gap-2 p:px-2 d:px-20 py-10">
           {FooterItems.map((items) => (

@@ -3,7 +3,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const Section3 = () => {
   return (
-    <div className="flex flex-col gap-32 pb-20 p-2">
+    <div className="flex flex-col gap-32 py-20 p-2">
       <div className="flex justify-center d:gap-44 p:gap-5 items-center d:flex-row p:flex-col">
         <div className="p:w-auto  d:w-[500px] flex flex-col gap-2">
           <h3 className="text-content">
@@ -27,7 +27,7 @@ const Section3 = () => {
           />
         </div>
       </div>
-      <div className="flex justify-center gap-44 p:gap-5 items-center  d:flex-row p:flex-col">
+      <div className="flex justify-center d:gap-44 p:gap-5 items-center  d:flex-row p:flex-col">
         <div>
           <img
             className="w-[630px]"

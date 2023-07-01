@@ -5,10 +5,12 @@ import Section3 from "./Section3/Section3";
 
 const Job = () => {
   return (
-    <div>
-      <Section1 />
-      <Section2 />
-      <Section3 />
+    <div className="flex  w-full flex-col items-center">
+      <div className="d:w-[1440px] p:w-screen">
+        <Section1 />
+        <Section2 />
+        <Section3 />
+      </div>
     </div>
   );
 };

@@ -10,15 +10,19 @@ import Section8 from "./Section8/Section8";
 
 const Home = () => {
   return (
-    <div>
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
-      <Section7 />
-      <Section8 />
+    <div className="flex  w-full flex-col items-center">
+      <div className="d:w-[1440px] p:w-screen">
+        <Section1 />
+      </div>
+      <div className="d:w-[1366px] p:w-screen mx-2">
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+        <Section7 />
+        <Section8 />
+      </div>
     </div>
   );
 };

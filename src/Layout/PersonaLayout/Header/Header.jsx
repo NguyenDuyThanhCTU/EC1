@@ -43,8 +43,8 @@ const Header = () => {
     <div className="h-[126px] ">
       <div className="bg-white ">
         <div className=" bg-none h-[126px] relative  bg-white ">
-          <div className=" w-full   italic text-[#1b365d] h-[92px] z-50 flex justify-center">
-            <div className="p:hidden d:flex justify-between  items-center w-[1100px]">
+          <div className=" w-full   italic text-[#1b365d] h-[92px] z-50 p:hidden d:flex justify-center">
+            <div className="flex justify-between  items-center w-[1100px]">
               <div className="flex items-center gap-2">
                 <Link to="/">
                   <img

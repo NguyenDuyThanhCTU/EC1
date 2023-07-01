@@ -8,7 +8,7 @@ import {
 
 const Section3 = () => {
   return (
-    <div className="relative pb-20 p:mt-20 d:m-0 px-2">
+    <div className="relative pb-20 p:mt-20 d:m-0 px-2 d:w-full p:w-screen">
       <div className=" pb-[100px]   flex flex-col items-start">
         <div className="">
           <h3 className="text-content">

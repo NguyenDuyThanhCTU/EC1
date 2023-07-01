@@ -8,14 +8,14 @@ const Section4 = () => {
   const [isSelected, setIsSelected] = useState(0);
   return (
     <div className="pb-20">
-      <div className="relative ">
+      <div className="relative mb-20">
         <div className="d:flex  relative p:hidden">
           <div className="flex-1"></div>
           <div className="flex-1 h-[900px] bg-slate-200"></div>
         </div>
 
         <div className="flex flex-col  d:absolute p:relative top-16  w-full items-center gap-16">
-          <div className="flex justify-between w-full pr-16 d:flex-row p:flex-col">
+          <div className="flex justify-between w-full pr-16 d:flex-row p:flex-col  p-2">
             <h3 className="text-content">
               <strong>Kiến thức</strong> bảo hiểm
             </h3>
@@ -37,7 +37,7 @@ const Section4 = () => {
               ))}
             </div>
           </div>
-          <div className="d:grid grid-cols-3 gap-0 w-full p:flex flex-col items-center">
+          <div className="d:grid grid-cols-3 gap-2 w-full p:flex flex-col items-center">
             {PersonaSection4Card.slice(0, 3).map((items) => (
               <>
                 <Card

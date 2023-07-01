@@ -2,7 +2,7 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <div className="h-[750px] relative pb-20">
+    <div className="h-[750px] relative d:pb-20 p:pb-0">
       <div>
         <img
           src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/chien-dich-thuong-hieu/2023/minh-con-co-nhau/MCCN_CorpWebHOMEPAGE_Main-banner-WEB_1366-x-560px_Couple.jpg"

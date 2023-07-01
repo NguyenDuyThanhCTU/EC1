@@ -12,14 +12,10 @@ const PersonaLayout = ({ children }) => {
       <div className="z-50 relative">
         <Header Login={setIsLogin} />
       </div>
-
-      <main className="d:mx-[250px] p:mx-0">
-        {children}
-        <div>
-          <Footer />
-        </div>
-      </main>
-
+      <main>{children} </main>
+      <div className="flex  justify-center">
+        <Footer />
+      </div>
       <div className="z-40 fixed">
         <Hotline />
       </div>

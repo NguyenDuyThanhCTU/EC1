@@ -7,14 +7,14 @@ import Card from "../../Item/Card";
 const Section2 = () => {
   const [isSelected, setIsSelected] = useState(0);
   return (
-    <div className="relative ">
+    <div className="relative  ">
       <div className="d:flex  relative p:hidden">
         <div className="flex-1"></div>
         <div className="flex-1 h-[900px] bg-grayBg"></div>
       </div>
 
       <div className="flex flex-col p:relative d:absolute top-16  w-full items-center gap-16">
-        <div className="flex justify-between w-full pr-16 d:flex-row p:flex-col">
+        <div className="flex justify-between d:w-full p:w-screen p-2 pr-16 d:flex-row p:flex-col">
           <h3 className="text-content">
             <strong>Thông tin</strong> mới nhất
           </h3>
@@ -33,7 +33,7 @@ const Section2 = () => {
             ))}
           </div>
         </div>
-        <div className="d:grid grid-cols-3  w-full p:flex flex-col items-center gap-5">
+        <div className="d:grid grid-cols-3  gap-2 w-full p:flex flex-col items-center ">
           {PersonaSection2Card.slice(0, 3).map((items) => (
             <>
               <Card
