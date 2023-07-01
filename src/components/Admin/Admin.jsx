@@ -3,21 +3,21 @@ import { useAuth } from "../../Context/AuthProviders";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header/Header";
 
-import { useStateProvider } from "../../Context/StateProvider";
 import Sidebar from "./Sidebar/Sidebar";
-import Persona from "./Content/Persona/Persona";
-import Businesses from "./Content/Businesses/Businesses";
 import { RxCrossCircled } from "react-icons/rx";
 import { FaList } from "react-icons/fa";
+import Fetch from "./Item/Fetch";
+import { useStateProvider } from "../../Context/StateProvider";
+import AddProduct from "./Content/Products/LeftSide/AddProduct.jsx/AddProduct";
+import AddType from "./Content/ProductType/AddType/AddType";
+import Content from "../Admin/Content/Content";
+import AddPost from "../Admin/Content/Post/AddPost/AddPost";
 
 const Admin = () => {
   const { verify } = useAuth();
-  const { isUploadProduct, isSelectedRole } = useStateProvider();
+  const { isUploadProduct } = useStateProvider();
   const [Hidden, setHidden] = useState(false);
   const navigate = useNavigate();
-  const logo1 = "https://image-sn.s3.amazonaws.com/Russo+Tech.png";
-  const logo2 = "https://image-sn.s3.amazonaws.com/NDTh.png";
-
   useEffect(() => {
     if (!verify) {
       navigate("/login");
@@ -25,7 +25,24 @@ const Admin = () => {
   }, []);
 
   return (
-    <div className="grid grid-flow-col font-LexendDeca">
+    <div className="grid grid-flow-col font-LexendDeca relative">
+      <div
+        className={`duration-300 absolute left-0 right-0  ${
+          isUploadProduct === "" ? "h-0" : "h-[100vh]"
+        }`}
+      >
+        {isUploadProduct === 1 ? (
+          <AddProduct />
+        ) : isUploadProduct === 2 ? (
+          <AddType />
+        ) : isUploadProduct === "Trang chủ" ? (
+          <AddPost type="Home" />
+        ) : isUploadProduct === "Tin tức" ? (
+          <AddPost type="News" />
+        ) : null}
+      </div>
+
+      <Fetch />
       <div
         className={`${
           Hidden ? "w-[1px] " : "w-[350px] "
@@ -49,11 +66,7 @@ const Admin = () => {
       <div className="w-[1570px] bg-[#292929]">
         <Header />
         <div>
-          {isSelectedRole === 0 ? (
-            <Persona />
-          ) : isSelectedRole === 1 ? (
-            <Businesses />
-          ) : null}
+          <Content />
         </div>
       </div>
     </div>

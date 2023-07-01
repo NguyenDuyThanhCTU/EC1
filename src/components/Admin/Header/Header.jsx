@@ -2,16 +2,10 @@ import React, { useState } from "react";
 import { useAuth } from "../../../Context/AuthProviders";
 import DropDown from "../Item/DropDown";
 import { useStateProvider } from "../../../Context/StateProvider";
+import Clock from "./Clock/Clock";
 
 const Header = () => {
   const { users } = useAuth();
-
-  const { setSelectedRole, isSelectedRole, setSelected } = useStateProvider();
-
-  const changeRoleDashboard = (idx) => {
-    setSelectedRole(idx);
-    setSelected(0);
-  };
 
   return (
     <div className=" h-14 bg-Blue3D font-LexendDeca text-white flex ">
@@ -34,22 +28,12 @@ const Header = () => {
         </div>
 
         <div className="cursor-pointer flex gap-20 ">
-          <div onClick={() => changeRoleDashboard(1)}>
-            <p className="hover:scale-110 duration-300">Doanh nghiệp</p>
-          </div>
-          <div onClick={() => changeRoleDashboard(0)}>
-            <p className="hover:scale-110 duration-300">Cá nhân</p>
+          <div>
+            <p className="hover:scale-110 duration-300 ">
+              <Clock />
+            </p>
           </div>
         </div>
-        <div
-          className={`w-5 h-1 bg-red-500 absolute right-14 bottom-3 ${
-            isSelectedRole === 0
-              ? "translate-x-[12px] transform  transition duration-700"
-              : isSelectedRole === 1
-              ? "-translate-x-[175px] transform  transition duration-700"
-              : null
-          }`}
-        ></div>
       </div>
     </div>
   );

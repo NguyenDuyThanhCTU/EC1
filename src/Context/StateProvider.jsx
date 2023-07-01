@@ -3,19 +3,21 @@ import React, { createContext, useContext, useState } from "react";
 const StateContext = createContext();
 
 export const StateProvider = ({ children }) => {
-  const [isUploadProduct, setIsUploadProduct] = useState(0);
+  const [isUploadProduct, setIsUploadProduct] = useState("");
   const [isSelected, setSelected] = useState(0);
+
   const [SortBySize, setSortBySize] = useState(" ");
   const [SortByType, setSortByType] = useState(" ");
-  const [isSelectedRole, setSelectedRole] = useState(0);
+
+  const [isRefetch, setIsRefetch] = useState();
 
   return (
     <StateContext.Provider
       value={{
-        isSelectedRole,
-        setSelectedRole,
         isSelected,
         setSelected,
+        isRefetch,
+        setIsRefetch,
         isUploadProduct,
         setIsUploadProduct,
         SortBySize,

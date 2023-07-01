@@ -30,7 +30,7 @@ export const LeftSide = ({
       setAccounts(data);
     });
   }, []);
-
+  console.log(accounts);
   const HandleChangePass = () => {
     if (accounts[0].username === Username) {
       setIsChangePasswords(true);
@@ -125,7 +125,7 @@ export const LeftSide = ({
       </div>
 
       <div className="border h-0 w-full relative mt-2 mb-4">
-        <p className="absolute bg-white d:px-10  p:px-5  py-1 text-center  -top-4 d:left-[15%] p:left-[7%]">
+        <p className="absolute bg-white px-10 py-1  -top-4 d:left-[20%] p:left-[9%]">
           Hoặc tiếp tục với Username
         </p>
       </div>

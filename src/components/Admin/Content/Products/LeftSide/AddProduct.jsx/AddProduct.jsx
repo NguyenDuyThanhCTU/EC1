@@ -1,32 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { FaCloudUploadAlt } from "react-icons/fa";
-import { BrickSize } from "../../../../../../../Utils/Item";
-import Input from "../../../../../Item/Input";
-import { BrickType } from "../../../../../../../Utils/Item";
+
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { getStorage } from "firebase/storage";
-import { useStateProvider } from "../../../../../../../Context/StateProvider";
-import {
-  addDocument,
-  getDocumentsById,
-} from "../../../../../../../Config/Services/Firebase/FireStoreDB";
+
 import { notification } from "antd";
 
-const EditProduct = (id) => {
+import { useStateProvider } from "../../../../../../Context/StateProvider";
+import Input from "../../../Item/Input";
+import { useData } from "../../../../../../Context/DataProviders";
+import { addDocument } from "../../../../../../Config/Services/Firebase/FireStoreDB";
+
+const AddProduct = () => {
   const [imageUrl, setImageUrl] = useState();
   const [name, setName] = useState("");
   const [brickSize, setBrickSize] = useState("15x90");
   const [brickType, setBrickType] = useState("GC");
   const [error, setError] = useState(false);
   const { setIsUploadProduct } = useStateProvider();
-
-  useEffect(() => {
-    getDocumentsById("products", id).then((data) => {
-      console.log(data);
-    });
-  }, []);
-
+  const { BrickSize, BrickType } = useData();
   const handleDiscard = () => {
     setImageUrl();
     setName("");
@@ -85,7 +78,11 @@ const EditProduct = (id) => {
   };
 
   return (
-    <div className="bg-[rgba(0,0,0,0.3)] w-full h-[94vh] z-50 absolute rounded-md ">
+    <div
+      className={`bg-[rgba(0,0,0,0.3)] w-full 
+       h-full
+      z-50 absolute rounded-md duration-300`}
+    >
       <div className="w-[1500px] h-[700px] absolute bg-white bottom-[15%] left-[12%] flex font-LexendDeca cursor-pointer rounded-sm ">
         <div className="justify-center   w-full flex items-center gap-20">
           <div className="">
@@ -178,7 +175,7 @@ const EditProduct = (id) => {
                     setBrickType(e.target.value);
                   }}
                 >
-                  {BrickType.map((item) => (
+                  {BrickType?.map((item) => (
                     <option
                       key={item.id}
                       className=" outline-none capitalize bg-white text-gray-700 text-md p-2 hover:bg-slate-300"
@@ -222,4 +219,4 @@ const EditProduct = (id) => {
   );
 };
 
-export default EditProduct;
+export default AddProduct;

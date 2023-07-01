@@ -6,7 +6,6 @@ import { AiOutlineUnorderedList } from "react-icons/ai";
 import { CgListTree } from "react-icons/cg";
 import { useStateProvider } from "../../../Context/StateProvider";
 import { ProductSidebarAdmin, WebsiteSidebarAdmin } from "../../../Utils/item";
-
 const Sidebar = () => {
   const { isSelected, setSelected } = useStateProvider();
 
