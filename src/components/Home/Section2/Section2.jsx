@@ -3,9 +3,12 @@ import React, { useState } from "react";
 import { PersonaSection2 } from "../../../Utils/item";
 import { PersonaSection2Card } from "../../../routes/Temp";
 import Card from "../../Item/Card";
+import { useData } from "../../../Context/DataProviders";
 
 const Section2 = () => {
   const [isSelected, setIsSelected] = useState(0);
+  const { Products } = useData();
+  // console.log(Products);
   return (
     <div className="relative  ">
       <div className="d:flex  relative p:hidden">

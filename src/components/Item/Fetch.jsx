@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 
-import { useStateProvider } from "../../../Context/StateProvider";
-import { useData } from "../../../Context/DataProviders";
+import { useStateProvider } from "../../Context/StateProvider";
+import { useData } from "../../Context/DataProviders";
 import {
   getDocuments,
   getProducts,
-} from "../../../Config/Services/Firebase/FireStoreDB";
+} from "../../Config/Services/Firebase/FireStoreDB";
 
 const Fetch = () => {
   const {
@@ -18,9 +18,9 @@ const Fetch = () => {
     setProducts,
     setGmail,
     setAddress,
-    setHomePosts,
+
     setSocialMedia,
-    setNewsPosts,
+    setTypePost,
   } = useData();
 
   const { isRefetch, setIsRefetch } = useStateProvider();
@@ -30,8 +30,10 @@ const Fetch = () => {
   }, []);
 
   useEffect(() => {
+    if (isRefetch != "") {
+      setIsRefetch("");
+    }
     getDocuments("website").then((data) => {
-      console.log(data);
       //Contact
       setPhone(data[0].phone);
       setGmail(data[0].gmail);
@@ -47,13 +49,12 @@ const Fetch = () => {
       setWebsiteName(data[3].websiteName);
     });
 
-    getProducts("homepost").then((data) => {
-      setHomePosts(data.reverse());
+    getProducts("posts").then((data) => {
+      setProducts(data.reverse());
     });
-    getProducts("newspost").then((data) => {
-      setNewsPosts(data.reverse());
+    getProducts("posttype").then((data) => {
+      setTypePost(data.reverse());
     });
-
     getDocuments("products").then((data) => {
       setProducts(data);
     });

@@ -28,7 +28,7 @@ const Post = () => {
         </h3>
         <div className="mt-5 border rounded-xl ">
           <Section
-            title="Trang chủ"
+            title="Sản phẩm"
             Data={HomePosts}
             HandleDelete={HandleDelete}
             setIsUploadProduct={setIsUploadProduct}

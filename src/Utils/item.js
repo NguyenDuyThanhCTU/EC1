@@ -106,6 +106,7 @@ export const SocialMediaDashboard = [
 ];
 
 //Custom
+
 export const HeaderItems = [
   {
     Content: "Trang chủ",
@@ -410,5 +411,17 @@ export const HomeSection6Card = [
     image:
       "https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/ve-prudential/2020/ve-prudential-bao-cao-tai-chinh-desktop-266x354.jpg",
     link: "https://www.prudential.com.vn/vi/tim-hieu-ve-prudential-viet-nam/bao-cao-tai-chinh/",
+  },
+];
+
+export const AdminPostSection = [
+  {
+    name: "Thông tin mới",
+  },
+  {
+    name: "Kiến thức bảo hiểm",
+  },
+  {
+    name: "Sản phẩm bảo hiểm bổ trợ",
   },
 ];

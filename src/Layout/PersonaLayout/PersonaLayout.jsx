@@ -4,12 +4,14 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Hotline from "./PopUp/Hotline";
 import OnTop from "./PopUp/OnTop";
+import Fetch from "../../components/Item/Fetch";
 
 const PersonaLayout = ({ children }) => {
   const [isLogin, setIsLogin] = useState(false);
 
   return (
     <div className="font-OpenSans bg-[#e8edef] relative ">
+      {/* <Fetch /> */}
       <div className="z-50 relative">
         <Header Login={setIsLogin} />
       </div>

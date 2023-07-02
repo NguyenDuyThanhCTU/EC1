@@ -30,13 +30,18 @@ export const DataProviders = ({ children }) => {
   const [HomePosts, setHomePosts] = useState([]);
   const [NewsPosts, setNewsPosts] = useState([]);
 
+  const [TypePost, setTypePost] = useState([]);
   return (
     <DataContext.Provider
       value={{
+        TypePost,
+        setTypePost,
+
+        Products,
+        setProducts,
         NewsPosts,
         setNewsPosts,
-        HomePosts,
-        setHomePosts,
+
         Facebook,
         setFacebook,
         Fanpages,
@@ -54,27 +59,27 @@ export const DataProviders = ({ children }) => {
         Youtube,
         setYoutube,
 
-        SocialMedia,
-        setSocialMedia,
-        Gmail,
-        setGmail,
-        Address,
-        setAddress,
-        Websitename,
-        setWebsiteName,
-        Advertisement,
-        setAdvertisement,
-        Products,
-        setProducts,
-
         Phone,
         setPhone,
-        Banner,
-        setBanner,
+        Gmail,
+        setGmail,
         Location,
         setLocation,
+        Address,
+        setAddress,
+
+        Banner,
+        setBanner,
+        Advertisement,
+        setAdvertisement,
+
+        SocialMedia,
+        setSocialMedia,
+
         Logo,
         setLogo,
+        Websitename,
+        setWebsiteName,
       }}
     >
       {children}

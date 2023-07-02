@@ -6,12 +6,13 @@ import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
 import { RxCrossCircled } from "react-icons/rx";
 import { FaList } from "react-icons/fa";
-import Fetch from "./Item/Fetch";
+import Fetch from "../Item/Fetch";
 import { useStateProvider } from "../../Context/StateProvider";
 import AddProduct from "./Content/Products/LeftSide/AddProduct.jsx/AddProduct";
 import AddType from "./Content/ProductType/AddType/AddType";
 import Content from "../Admin/Content/Content";
 import AddPost from "../Admin/Content/Post/AddPost/AddPost";
+import AddTypePost from "./Content/Post/AddTypePost/AddTypePost";
 
 const Admin = () => {
   const { verify } = useAuth();
@@ -35,10 +36,12 @@ const Admin = () => {
           <AddProduct />
         ) : isUploadProduct === 2 ? (
           <AddType />
-        ) : isUploadProduct === "Trang chủ" ? (
-          <AddPost type="Home" />
+        ) : isUploadProduct === "Sản phẩm" ? (
+          <AddPost type="chủ" />
         ) : isUploadProduct === "Tin tức" ? (
-          <AddPost type="News" />
+          <AddPost type="Tin tức" />
+        ) : isUploadProduct === "type-Sản phẩm" ? (
+          <AddTypePost type="Home" />
         ) : null}
       </div>
 

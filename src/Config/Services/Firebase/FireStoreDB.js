@@ -74,10 +74,19 @@ export const getProducts = async (Collection) => {
 // export const useGetDocumentByField = (CollectionName,field,value){
 
 // }
-export const getDocumentByField = async (collection, field, value) => {
+export const getDocumentByField = async (Collection, field, value) => {
   try {
+    const q = query(collection(db, Collection), where(field, "==", value));
+    const querySnapshot = await getDocs(q);
+    const data = [];
+
+    querySnapshot.forEach((doc) => {
+      data.push({ id: doc.id, ...doc.data() });
+    });
+
+    return data;
   } catch (error) {
-    console.log(error);
+    console.error("Error get document: ", error);
   }
 };
 
@@ -134,14 +143,6 @@ export const updateDocument = async (collectionName, id, newData) => {
   await updateDoc(doc(db, collectionName, id), newData);
 };
 
-export const delDocument = async (CollectionName, id) => {
-  try {
-    await deleteDoc(doc(db, CollectionName, id));
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 export const updateArrayFieldAtIndex = async (
   collectionName,
   id,
@@ -176,5 +177,13 @@ export const updateArrayFieldAtIndex = async (
     }
   } catch (error) {
     console.error("Lỗi khi cập nhật trường mảng:", error);
+  }
+};
+
+export const delDocument = async (CollectionName, id) => {
+  try {
+    await deleteDoc(doc(db, CollectionName, id));
+  } catch (error) {
+    console.log(error);
   }
 };
