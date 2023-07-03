@@ -11,7 +11,7 @@ const Fetch = () => {
   const {
     setPhone,
     setAdvertisement,
-    setBanner,
+
     setLocation,
     setLogo,
     setWebsiteName,
@@ -21,6 +21,7 @@ const Fetch = () => {
     setIco,
     setSocialMedia,
     setTypePost,
+    setSlides,
   } = useData();
 
   const { isRefetch, setIsRefetch } = useStateProvider();
@@ -40,7 +41,7 @@ const Fetch = () => {
       setLocation(data[0].location);
       setAddress(data[0].address);
       //Slide
-      setBanner(data[1].Slide0);
+
       setAdvertisement(data[1].advertisement);
       //SocialMedia
       setSocialMedia(data[2].Data);
@@ -50,9 +51,14 @@ const Fetch = () => {
       setIco(data[3].websiteIco);
     });
 
+    getDocuments("slide").then((data) => {
+      setSlides(data.reverse());
+    });
+
     getProducts("posts").then((data) => {
       setProducts(data.reverse());
     });
+
     getProducts("posttype").then((data) => {
       setTypePost(data.reverse());
     });

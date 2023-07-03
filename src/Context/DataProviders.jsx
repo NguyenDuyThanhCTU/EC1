@@ -32,11 +32,15 @@ export const DataProviders = ({ children }) => {
   const [NewsPosts, setNewsPosts] = useState([]);
 
   const [TypePost, setTypePost] = useState([]);
+  const [Slides, setSlides] = useState([]);
   return (
     <DataContext.Provider
       value={{
         TypePost,
         setTypePost,
+
+        Slides,
+        setSlides,
 
         Products,
         setProducts,

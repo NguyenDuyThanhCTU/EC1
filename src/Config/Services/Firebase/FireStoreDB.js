@@ -12,9 +12,9 @@ import {
   onSnapshot,
   Timestamp,
   deleteDoc,
+  arrayUnion,
 } from "firebase/firestore";
 import { db } from "../../Firebase";
-import { MdCollectionsBookmark } from "react-icons/md";
 
 export const addDocument = async (Collection, data) => {
   data.createdAt = serverTimestamp();
@@ -24,6 +24,27 @@ export const addDocument = async (Collection, data) => {
     console.log("Document written with ID: ", newDocument.id);
   } catch (error) {
     console.error("Error adding document: ", error);
+  }
+};
+
+export const addDocumentByField = async (
+  collectionName,
+  documentName,
+  arrayField,
+  fieldData
+) => {
+  const documentRef = doc(collection(db, collectionName), documentName);
+
+  const fieldUpdate = {};
+  fieldUpdate[arrayField] = arrayUnion(fieldData);
+
+  try {
+    await updateDoc(documentRef, fieldUpdate);
+    console.log(
+      `Data added to field '${arrayField}' in document '${documentName}'`
+    );
+  } catch (error) {
+    console.error("Error adding data to field: ", error);
   }
 };
 
@@ -159,7 +180,6 @@ export const updateArrayFieldAtIndex = async (
 
       if (Array.isArray(currentData[fieldName])) {
         const updatedArray = [...currentData[fieldName]]; // Tạo một bản sao của mảng hiện tại
-        console.log(updatedArray);
         if (index >= 0 || index < updatedArray.length) {
           updatedArray[index] = newData; // Cập nhật giá trị tại vị trí index trong mảng
 

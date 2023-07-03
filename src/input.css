@@ -154,6 +154,9 @@
   .cols-4{
     grid-template-columns: 15% 35% 30% 20%;
   }
+  .cols-3{
+    grid-template-columns: 30% 40% 30%;
+  }
   .cols-7{
     grid-template-columns: 5% 10% 10% 10% 10% 15% 40%;
       }
