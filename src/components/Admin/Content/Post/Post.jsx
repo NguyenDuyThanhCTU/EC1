@@ -11,7 +11,7 @@ import { useData } from "../../../../Context/DataProviders";
 
 const Post = () => {
   const { setIsUploadProduct } = useStateProvider();
-  const { HomePosts, NewsPosts } = useData();
+  const { Products, NewsPosts } = useData();
 
   const HandleDelete = (id) => {
     delDocument("products", id).then(() => {
@@ -29,7 +29,7 @@ const Post = () => {
         <div className="mt-5 border rounded-xl ">
           <Section
             title="Sản phẩm"
-            Data={HomePosts}
+            Data={Products}
             HandleDelete={HandleDelete}
             setIsUploadProduct={setIsUploadProduct}
           />
@@ -39,12 +39,12 @@ const Post = () => {
             HandleDelete={HandleDelete}
             setIsUploadProduct={setIsUploadProduct}
           /> */}
-          <Section
+          {/* <Section
             title="Tin tức"
             Data={NewsPosts}
             HandleDelete={HandleDelete}
             setIsUploadProduct={setIsUploadProduct}
-          />
+          /> */}
         </div>
       </div>
     </div>

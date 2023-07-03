@@ -34,15 +34,6 @@ const Persona = () => {
               <Post />
             </div>
           </>
-        ) : isSelected === 4 ? (
-          <div className="p-5 px-10 flex justify-start gap-10">
-            {" "}
-            <Products />
-          </div>
-        ) : isSelected === 5 ? (
-          <div className="p-5 px-10 flex justify-start gap-10">
-            <ProductType />
-          </div>
         ) : null}
       </div>
     </div>

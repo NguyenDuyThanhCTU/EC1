@@ -8,6 +8,7 @@ import { MdOutlineFormatListBulleted } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import DropDown from "./Item/DropDown";
 import { BiUserCircle } from "react-icons/bi";
+import { useData } from "../../../Context/DataProviders";
 
 const Header = () => {
   const [isSelected, setIsSelected] = useState(0);
@@ -16,6 +17,7 @@ const Header = () => {
   const [elementTop, setElementTop] = useState(95);
   const [IsTranslate, setTranslate] = useState(false);
   const targetPosition = 1;
+  const { Logo } = useData();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,11 +49,7 @@ const Header = () => {
             <div className="flex justify-between  items-center w-[1100px]">
               <div className="flex items-center gap-2">
                 <Link to="/">
-                  <img
-                    src="https://www.prudential.com.vn/export/sites/prudential-vn/vi/.thu-vien/hinh-anh/trang-chu/prudential-logo-181x32.png"
-                    alt="img"
-                    className="w-[200px]"
-                  />
+                  <img src={Logo} alt="img" className="w-[200px]" />
                 </Link>
                 <Link to="/">
                   <img

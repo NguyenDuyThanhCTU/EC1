@@ -54,13 +54,14 @@ const Section7 = () => {
                   src={items.link}
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
+
         <div className="d:hidden  justify-center p-5 p:flex">
           <Swiper
             slidesPerView={1}
@@ -75,15 +76,15 @@ const Section7 = () => {
           >
             {HomeSection7Videos.map((items) => (
               <SwiperSlide>
-                <iframe
+                {/* <iframe
                   width="400"
                   height="300"
                   src={items.link}
                   title="YouTube video player"
                   frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
-                ></iframe>
+                ></iframe> */}
               </SwiperSlide>
             ))}
           </Swiper>

@@ -14,6 +14,7 @@ export const DataProviders = ({ children }) => {
   const [SocialMedia, setSocialMedia] = useState([]);
   const [Products, setProducts] = useState([]);
   const [Logo, setLogo] = useState("");
+  const [Ico, setIco] = useState("");
   const [Websitename, setWebsiteName] = useState("");
 
   const [Facebook, setFacebook] = useState();
@@ -80,6 +81,8 @@ export const DataProviders = ({ children }) => {
         setLogo,
         Websitename,
         setWebsiteName,
+        Ico,
+        setIco,
       }}
     >
       {children}

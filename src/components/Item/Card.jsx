@@ -1,10 +1,12 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-const Card = ({ image, title, content, date, type }) => {
+const Card = ({ image, title, content, date, type, size }) => {
   return (
     // <Link to={link}>
-    <div className="bg-white hover:shadow-2xl rounded-2xl w-[400px] h-[540px] cursor-pointer">
+    <div
+      className={`bg-white hover:shadow-2xl rounded-2xl w-[400px] h-[${size}px] cursor-pointer`}
+    >
       <div className="relative">
         <img
           src={image}

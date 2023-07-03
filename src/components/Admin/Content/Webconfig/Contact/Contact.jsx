@@ -76,7 +76,6 @@ const Contact = () => {
                 <div className="flex gap-5">
                   {Type && (
                     <div onClick={() => setSelected(idx)}>
-                      {" "}
                       <Type
                         placeholder={items.placeholder}
                         type="text"

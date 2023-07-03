@@ -46,11 +46,17 @@ const AddProduct = ({ type }) => {
         description: `Vui lòng bổ sung đầy đủ thông tin !`,
       });
     } else {
+      let Post = "";
+      if ((type = "chủ")) {
+        Post = "Home";
+      } else {
+        Post = "News";
+      }
       const data = {
         image: "",
         content: Content,
         title: Title,
-        post: "Home",
+        post: Post,
         section: Section,
         type: Type,
       };

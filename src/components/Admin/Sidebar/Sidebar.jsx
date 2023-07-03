@@ -6,9 +6,16 @@ import { AiOutlineUnorderedList } from "react-icons/ai";
 import { CgListTree } from "react-icons/cg";
 import { useStateProvider } from "../../../Context/StateProvider";
 import { ProductSidebarAdmin, WebsiteSidebarAdmin } from "../../../Utils/item";
+import { Alert, notification } from "antd";
 const Sidebar = () => {
   const { isSelected, setSelected } = useStateProvider();
-
+  const HandleBlock = () => {
+    notification["warning"]({
+      message: "Thao tác không thành công",
+      description: ` 
+      Website của bạn không hỗ trợ chức năng này !`,
+    });
+  };
   return (
     <div className="bg-black  h-screen text-white border-r border-gray-800">
       <div className="w-full flex items-center justify-center border-b border-gray-800 py-3">
@@ -72,7 +79,7 @@ const Sidebar = () => {
                   className={`flex gap-3 items-center cursor-pointer hover:scale-125 duration-300 ${
                     isSelected === idx + 4 ? "text-blue-400" : "border-white"
                   }`}
-                  onClick={() => setSelected(idx + 4)}
+                  onClick={() => HandleBlock()}
                 >
                   {Icon && (
                     <Icon
@@ -101,10 +108,6 @@ const Sidebar = () => {
             ? "translate-y-[142px]"
             : isSelected === 3
             ? "translate-y-[212px]"
-            : isSelected === 4
-            ? "translate-y-[368px]"
-            : isSelected === 5
-            ? "translate-y-[438px]"
             : null
         }`}
         ></div>

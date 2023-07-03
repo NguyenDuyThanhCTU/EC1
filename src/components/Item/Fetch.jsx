@@ -18,7 +18,7 @@ const Fetch = () => {
     setProducts,
     setGmail,
     setAddress,
-
+    setIco,
     setSocialMedia,
     setTypePost,
   } = useData();
@@ -47,6 +47,7 @@ const Fetch = () => {
       //Trademark
       setLogo(data[3].websiteLogo);
       setWebsiteName(data[3].websiteName);
+      setIco(data[3].websiteIco);
     });
 
     getProducts("posts").then((data) => {
@@ -54,9 +55,6 @@ const Fetch = () => {
     });
     getProducts("posttype").then((data) => {
       setTypePost(data.reverse());
-    });
-    getDocuments("products").then((data) => {
-      setProducts(data);
     });
   }, [isRefetch]);
   return <></>;

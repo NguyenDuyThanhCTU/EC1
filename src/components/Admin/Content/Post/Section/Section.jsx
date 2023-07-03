@@ -13,7 +13,8 @@ const Section = ({ title, Data, HandleDelete, setIsUploadProduct }) => {
           {title}
         </h3>
       </div>
-      <div className="border border-gray-500 rounded-xl mx-5 mt-5 h-[270px] overflow-y-scroll">
+      {/* h-270px */}
+      <div className="border border-gray-500 rounded-xl mx-5 mt-5 h-[500px] overflow-y-scroll">
         {Data?.map((data, idx) => (
           <div className="grid  cols-7 items-center my-2  ml-1 justify-start px-5 ">
             <div className="group relative ">
@@ -65,13 +66,13 @@ const Section = ({ title, Data, HandleDelete, setIsUploadProduct }) => {
                 </>
               )}
             </div>
-            <div>{data.type}</div>
-            <div>{data.section}</div>
+            <div className="truncate w-[100px]">{data.type}</div>
+            <div className="truncate w-[150px]">{data.section}</div>
             <p className=" truncate ">{data.content}</p>
           </div>
         ))}
       </div>
-      <div className="mt-2 flex w-full  justify-center gap-5">
+      <div className="mt-5 flex w-full  justify-center gap-5">
         <button
           className="py-3 px-5 bg-BlueFF  rounded-sm hover:bg-BlueFFhover"
           onClick={() => {

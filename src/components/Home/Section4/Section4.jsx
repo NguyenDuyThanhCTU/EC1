@@ -1,11 +1,41 @@
-import React, { useState } from "react";
-import Card from "./Card/Card";
+import React, { useEffect, useState } from "react";
 
 import { BsArrowRightShort } from "react-icons/bs";
 import { PersonaSection4Card } from "../../../routes/Temp";
 import { PersonaSection4 } from "../../../Utils/item";
+import { useData } from "../../../Context/DataProviders";
+import { Result } from "antd";
+import Card from "../../Item/Card";
 const Section4 = () => {
   const [isSelected, setIsSelected] = useState(0);
+  const [ListProducts, setListProducts] = useState([]);
+  const { Products } = useData();
+
+  useEffect(() => {
+    const newFilteredArray = Products.filter(
+      (item) => item.section === "Thông tin mới" && item.post === "Home"
+    );
+    setListProducts(newFilteredArray);
+  }, [Products]);
+
+  const HandleSelect = (idx, name) => {
+    setIsSelected(idx);
+    if (idx === 0) {
+      const newFilteredArray = Products.filter(
+        (item) => item.section === "Thông tin mới" && item.post === "Home"
+      );
+      setListProducts(newFilteredArray);
+    } else {
+      const newFilteredArray = Products.filter(
+        (item) =>
+          item.section === "Thông tin mới" &&
+          item.post === "Home" &&
+          item.type === name
+      );
+      setListProducts(newFilteredArray);
+    }
+  };
+
   return (
     <div className="pb-20">
       <div className="relative mb-20">
@@ -29,7 +59,7 @@ const Section4 = () => {
                         ? "bg-[#1b365d]  text-white "
                         : "bg-white"
                     }`}
-                    onClick={() => setIsSelected(idx)}
+                    onClick={() => HandleSelect(idx, items.name)}
                   >
                     {items.name}
                   </div>
@@ -37,22 +67,36 @@ const Section4 = () => {
               ))}
             </div>
           </div>
-          <div className="d:grid grid-cols-3 gap-2 w-full p:flex flex-col items-center">
-            {PersonaSection4Card.slice(0, 3).map((items) => (
-              <>
-                <Card
-                  image={items.image}
-                  date={items.date}
-                  type={items.type}
-                  title={items.title}
-                  content={items.content}
-                />
-              </>
-            ))}
-          </div>
-          <div className="font-bold bg-redPrimmary hover:scale-110 duration-300 hover:shadow-2xl  text-white w-[150px] rounded-3xl py-3 px-6 cursor-pointer">
-            Xem chi tiết
-          </div>
+          {ListProducts.length > 0 ? (
+            <>
+              <div className="d:grid grid-cols-3  gap-2 w-full p:flex flex-col items-center ">
+                {ListProducts.slice(0, 3).map((items, idx) => (
+                  <>
+                    <Card
+                      image={items.image}
+                      date={items.date}
+                      type={items.type}
+                      title={items.title}
+                      content={items.content}
+                      link={items.link}
+                    />
+                  </>
+                ))}
+              </div>
+              <div className="font-bold bg-redPrimmary hover:scale-110 duration-300 hover:shadow-2xl  text-white w-[150px] rounded-3xl py-3 px-6 cursor-pointer">
+                Xem chi tiết
+              </div>
+            </>
+          ) : (
+            <div className="bg-blue-300 w-full ">
+              {" "}
+              <Result
+                status="404"
+                title="Không tìm thấy bài viết!"
+                subTitle="Không có bài viết phù hợp với yêu cầu của bạn "
+              />
+            </div>
+          )}
         </div>
       </div>
 
