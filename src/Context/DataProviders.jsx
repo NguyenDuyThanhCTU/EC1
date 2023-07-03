@@ -33,9 +33,27 @@ export const DataProviders = ({ children }) => {
 
   const [TypePost, setTypePost] = useState([]);
   const [Slides, setSlides] = useState([]);
+
+  const [userName, setUserName] = useState();
+  const [Academic, setAcademic] = useState();
+  const [Work, setWork] = useState();
+  const [YearOfBirth, setYearOfBirth] = useState();
+  const [StartJob, setStartJob] = useState();
+
   return (
     <DataContext.Provider
       value={{
+        userName,
+        setUserName,
+        Academic,
+        setAcademic,
+        Work,
+        setWork,
+        YearOfBirth,
+        setYearOfBirth,
+        StartJob,
+        setStartJob,
+
         TypePost,
         setTypePost,
 

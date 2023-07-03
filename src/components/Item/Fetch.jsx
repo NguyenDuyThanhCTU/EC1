@@ -22,6 +22,11 @@ const Fetch = () => {
     setSocialMedia,
     setTypePost,
     setSlides,
+    setUserName,
+    setAcademic,
+    setWork,
+    setYearOfBirth,
+    setStartJob,
   } = useData();
 
   const { isRefetch, setIsRefetch } = useStateProvider();
@@ -41,14 +46,19 @@ const Fetch = () => {
       setLocation(data[0].location);
       setAddress(data[0].address);
       //Slide
-
-      setAdvertisement(data[1].advertisement);
+      setAdvertisement(data[2].advertisement);
+      //Information
+      setUserName(data[1].username);
+      setAcademic(data[1].academic);
+      setWork(data[1].work);
+      setYearOfBirth(data[1].yearOfBirth);
+      setStartJob(data[1].startJob);
       //SocialMedia
-      setSocialMedia(data[2].Data);
+      setSocialMedia(data[3].Data);
       //Trademark
-      setLogo(data[3].websiteLogo);
-      setWebsiteName(data[3].websiteName);
-      setIco(data[3].websiteIco);
+      setLogo(data[4].websiteLogo);
+      setWebsiteName(data[4].websiteName);
+      setIco(data[4].websiteIco);
     });
 
     getDocuments("slide").then((data) => {

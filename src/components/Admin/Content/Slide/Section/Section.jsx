@@ -8,16 +8,14 @@ import { Empty, notification } from "antd";
 
 import ListSlide from "./ListSlide/ListSlide";
 import { useStateProvider } from "../../../../../Context/StateProvider";
-import {
-  addDocument,
-  updateDocument,
-} from "../../../../../Config/Services/Firebase/FireStoreDB";
+import { addDocument } from "../../../../../Config/Services/Firebase/FireStoreDB";
+import SubSection from "./SubSection/SubSection";
 
 const Section = ({ name, type }) => {
   const [imageUrl, setImageUrl] = useState();
   const [error, setError] = useState(false);
   const [Data, setData] = useState();
-  const [isSelected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(false);
   const { setIsRefetch } = useStateProvider();
 
   const progressCircle = useRef(null);
@@ -54,7 +52,7 @@ const Section = ({ name, type }) => {
     setError(false);
   }, 3000);
 
-  const HandleUpload = () => {
+  const HandleUpdate = () => {
     let Type = "";
     if (type === "persona") {
       Type = "Thành tựu";
@@ -75,58 +73,6 @@ const Section = ({ name, type }) => {
       setIsRefetch("personal title");
       setSelected(false);
     });
-  };
-  const SlideItems = [
-    {
-      name: "Số điện thoại",
-      type: "input",
-      placeholder: Phone,
-    },
-    {
-      name: "Gmail",
-      type: "input",
-      placeholder: Gmail,
-    },
-    {
-      name: "Địa chỉ",
-      type: "textarea",
-      placeholder: Address,
-    },
-    {
-      name: "Vị trí",
-      type: "input",
-      placeholder: Location,
-    },
-  ];
-
-  const HandleUpdate = (idx) => {
-    if (Data === "") {
-      notification["error"]({
-        message: "Lỗi !",
-        description: ` 
-        Vui lòng nhập thông tin trước khi CẬP NHẬT !`,
-      });
-    } else {
-      let newData;
-      if (idx === 0) {
-        newData = { phone: Data };
-      } else if (idx === 1) {
-        newData = { gmail: Data };
-      } else if (idx === 2) {
-        newData = { address: Data };
-      } else if (idx === 3) {
-        newData = { location: Data };
-      }
-
-      updateDocument("website", "Contact", newData).then(() => {
-        notification["success"]({
-          message: "Thành công !",
-          description: `
-          Thông tin đã được CẬP NHẬT !`,
-        });
-        setIsRefetch("contact");
-      });
-    }
   };
 
   return (
@@ -194,11 +140,11 @@ const Section = ({ name, type }) => {
                   </p>
                 )}
               </div>
-              {isSelected ? (
+              {selected ? (
                 <div className="mt-5">
                   <div
                     className="text-center  uppercase py-2 border mx-2 bg-purple hover:bg-purpleAdmin hover:text-purpleHover hover:border-purpleHover text-blueAdmin border-blueAdmin block group-hover:hidden"
-                    onClick={() => HandleUpload()}
+                    onClick={() => HandleUpdate(0)}
                   >
                     Cập nhật
                   </div>
@@ -209,55 +155,7 @@ const Section = ({ name, type }) => {
                 </div>
               )}
             </div>
-            <div className=" shadow-2xl bg-[#353535]">
-              <div className="p-4  ">
-                <h3 className="text-[25px] text-center ">Thông tin liên hệ</h3>
-                <div className="flex flex-col gap-3 mt-5">
-                  {SlideItems.map((items, idx) => {
-                    let Type = items.type;
-                    return (
-                      <>
-                        <label>{items.name}</label>
-                        <div className="flex gap-5">
-                          {Type && (
-                            <div onClick={() => setSelected(idx)}>
-                              <Type
-                                placeholder={items.placeholder}
-                                type="text"
-                                className="px-4 py-2 text-black outline-none rounded-2xl bg-gray-300 w-[240px] "
-                                onChange={(e) => setData(e.target.value)}
-                              />
-                            </div>
-                          )}
-                          <div>
-                            {isSelected === idx ? (
-                              <button
-                                className="hover:bg-[#bb86fc37] hover:text-[#BB86FC] text-[#74affc] bg-[#74affc43] px-3 py-2 rounded-xl"
-                                onClick={() => HandleUpdate(idx)}
-                              >
-                                Cập nhật
-                              </button>
-                            ) : (
-                              <button className="text-white bg-gray-400 px-3 py-2 rounded-xl cursor-default">
-                                Cập nhật
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      </>
-                    );
-                  })}
-                  <iframe
-                    src={Location}
-                    width="300"
-                    height="200"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
+            <SubSection type={type} />
           </div>
 
           <ListSlide type={type} />
