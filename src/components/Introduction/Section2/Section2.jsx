@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsDot } from "react-icons/bs";
 import "swiper/css";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IntroSection2Items1, IntroSection2Items2 } from "../../../Utils/temp";
+import { useData } from "../../../Context/DataProviders";
 
 const Section2 = () => {
+  const { Slides, userName, Academic, Work, YearOfBirth, StartJob } = useData();
+  const [ListPersona, setListPersona] = useState([]);
+  const [listAchievements, setListAchievements] = useState([]);
+  useEffect(() => {
+    const newListPersona = Slides.filter((item) => item.type === "Thành tựu");
+    setListPersona(newListPersona);
+
+    const newlistAchievements = Slides.filter(
+      (item) => item.type === "Danh hiệu"
+    );
+    setListAchievements(newlistAchievements);
+  }, [Slides]);
+
   return (
     <div className="flex flex-col justify-center items-center font-LexendDeca">
       <div className="w-full">
@@ -31,7 +45,7 @@ const Section2 = () => {
             modules={[Autoplay]}
             className="mySwiper "
           >
-            {IntroSection2Items1.map((items) => (
+            {ListPersona?.map((items) => (
               <SwiperSlide>
                 <div className=" ">
                   <img
@@ -55,26 +69,26 @@ const Section2 = () => {
                 <div className="flex p-5  justify-between">
                   <p className="">Năm sinh</p>
                   <span className=""></span>
-                  <p className="">1985</p>
+                  <p className="">{YearOfBirth}</p>
                 </div>
 
                 <div className="flex p-5 justify-between gap-10 border-t">
                   <p>Ngày gia nhập ngành</p>
                   <span className=""></span>
-                  <p className="">26/12/2017</p>
+                  <p className="">{StartJob}</p>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex flex-col gap-3 ">
-            <h3 className="text-[30px]">HUỲNH THANH NAM</h3>
+            <h3 className="text-[30px]">{userName}</h3>
             <p className="text-gray-500 ">
-              <span className="font-semibold text-black">Trình độ:</span> Đại
-              học Luật - Kế Toán
+              <span className="font-semibold text-black">Trình độ:</span>{" "}
+              {Academic}
             </p>
             <p className="text-gray-500 ">
               <span className="font-semibold text-black">Đơn vị công tác:</span>{" "}
-              CÔNG TY TNHH BHNT PRUDENTIAL VIỆT NAM
+              {Work}
             </p>
             <span className="font-semibold text-black">
               Vị trí và chức vụ hiện tại:
@@ -110,7 +124,7 @@ const Section2 = () => {
             modules={[Autoplay]}
             className="mySwiper"
           >
-            {IntroSection2Items2.map((items) => (
+            {listAchievements?.map((items) => (
               <SwiperSlide>
                 <div className=" ">
                   <img
@@ -134,13 +148,13 @@ const Section2 = () => {
                 <div className="flex p-5  justify-between">
                   <p className="">Năm sinh</p>
                   <span className=""></span>
-                  <p className="">1985</p>
+                  <p className="">{YearOfBirth}</p>
                 </div>
 
                 <div className="flex p-5 justify-between gap-10 border-t">
                   <p>Ngày gia nhập ngành</p>
                   <span className=""></span>
-                  <p className="">26/12/2017</p>
+                  <p className="">{StartJob}</p>
                 </div>
               </div>
             </div>

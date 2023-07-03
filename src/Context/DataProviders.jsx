@@ -39,10 +39,12 @@ export const DataProviders = ({ children }) => {
   const [Work, setWork] = useState();
   const [YearOfBirth, setYearOfBirth] = useState();
   const [StartJob, setStartJob] = useState();
-
+  const [Avatar, setAvatar] = useState();
   return (
     <DataContext.Provider
       value={{
+        Avatar,
+        setAvatar,
         userName,
         setUserName,
         Academic,

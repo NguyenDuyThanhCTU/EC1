@@ -27,6 +27,7 @@ const Fetch = () => {
     setWork,
     setYearOfBirth,
     setStartJob,
+    setAvatar,
   } = useData();
 
   const { isRefetch, setIsRefetch } = useStateProvider();
@@ -53,6 +54,7 @@ const Fetch = () => {
       setWork(data[1].work);
       setYearOfBirth(data[1].yearOfBirth);
       setStartJob(data[1].startJob);
+      setAvatar(data[1].avatar);
       //SocialMedia
       setSocialMedia(data[3].Data);
       //Trademark

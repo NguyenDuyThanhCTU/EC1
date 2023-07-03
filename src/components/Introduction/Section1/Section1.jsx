@@ -4,21 +4,18 @@ import { FaLaptopCode } from "react-icons/fa";
 import { BsPhone } from "react-icons/bs";
 import { IconMapping, SocialMediaDashboard } from "../../../Utils/item";
 import { GoMail } from "react-icons/go";
-import {
-  FcBusinessman,
-  FcCollaboration,
-  FcManager,
-  FcStatistics,
-} from "react-icons/fc";
+import { FcBusinessman, FcStatistics } from "react-icons/fc";
 import { GiBlackKnightHelm, GiLifeBar } from "react-icons/gi";
-import { BiUserVoice } from "react-icons/bi";
+import { useData } from "../../../Context/DataProviders";
+
 const Section1 = () => {
+  const { Avatar, SocialMedia } = useData();
   return (
     <div className="my-24 ">
       <div className="relative">
         <div className="flex justify-center ">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/demo2512.appspot.com/o/1%2F11.jpg?alt=media&token=3450ba39-9bf7-42b7-aa1c-95ae70320791"
+            src={Avatar}
             alt="avatar"
             className="rounded-full shadow-xl d:h-[500px] d:w-[500px] object-cover object-top p:w-[250px] p:h-[250px]"
           />
@@ -91,13 +88,22 @@ const Section1 = () => {
             <h3 className="text-[15px] mb-2 text-gray-400">Contact me</h3>
             <div className="flex gap-5 text-[40px]  cursor-pointer w-[310px]">
               <BsPhone className=" hover:scale-125 duration-300" />
-              {SocialMediaDashboard.slice(0, 2).map((items) => {
+              {SocialMediaDashboard.slice(0, 2).map((items, idx) => {
                 let Icon = IconMapping[items.icon];
-
+                const data = SocialMedia[idx];
                 return (
                   <>
                     {Icon && (
-                      <Icon className=" hover:text-blue-500 hover:scale-125 duration-300 border  " />
+                      <a
+                        href={`${
+                          items.icon === "SiZalo"
+                            ? `https://zalo.me/${data}`
+                            : data
+                        }`}
+                        target="_blank"
+                      >
+                        <Icon className=" hover:text-blue-500 hover:scale-125 duration-300 border  " />
+                      </a>
                     )}
                   </>
                 );
@@ -114,23 +120,33 @@ const Section1 = () => {
               Follow me
             </h3>
             <div className="flex gap-5 text-[35px]  cursor-pointer">
-              {SocialMediaDashboard.slice(2).map((items) => {
+              {SocialMediaDashboard.slice(2).map((items, idx) => {
                 let Icon = IconMapping[items.icon];
+                const data = SocialMedia[idx];
 
                 return (
                   <>
                     {Icon && (
-                      <Icon
-                        className={`${
-                          items.icon === "AiFillInstagram"
-                            ? "hover:text-pink-500"
-                            : items.icon === "FaTiktok"
-                            ? "hover:text-black"
-                            : items.icon === "BsYoutube"
-                            ? "hover:text-redPrimmary"
-                            : "hover:text-blue-500"
-                        }  hover:scale-125 duration-300 border`}
-                      />
+                      <a
+                        href={`${
+                          items.icon === "SiZalo"
+                            ? `https://zalo.me/${data}`
+                            : data
+                        }`}
+                        target="_blank"
+                      >
+                        <Icon
+                          className={`${
+                            items.icon === "AiFillInstagram"
+                              ? "hover:text-pink-500"
+                              : items.icon === "FaTiktok"
+                              ? "hover:text-black"
+                              : items.icon === "BsYoutube"
+                              ? "hover:text-redPrimmary"
+                              : "hover:text-blue-500"
+                          }  hover:scale-125 duration-300 border`}
+                        />
+                      </a>
                     )}
                   </>
                 );
