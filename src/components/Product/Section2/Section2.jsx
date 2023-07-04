@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ProductSection2 } from "../../../Utils/item";
-import { ProductSection2Card } from "../../../Utils/temp";
 import Card from "../../Item/Card";
 import { Result } from "antd";
 import { useData } from "../../../Context/DataProviders";

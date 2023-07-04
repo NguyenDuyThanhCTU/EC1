@@ -6,9 +6,6 @@ export const StateProvider = ({ children }) => {
   const [isUploadProduct, setIsUploadProduct] = useState("");
   const [isSelected, setSelected] = useState(0);
 
-  const [SortBySize, setSortBySize] = useState(" ");
-  const [SortByType, setSortByType] = useState(" ");
-
   const [isRefetch, setIsRefetch] = useState("");
 
   return (
@@ -20,10 +17,6 @@ export const StateProvider = ({ children }) => {
         setIsRefetch,
         isUploadProduct,
         setIsUploadProduct,
-        SortBySize,
-        setSortBySize,
-        SortByType,
-        setSortByType,
       }}
     >
       {children}

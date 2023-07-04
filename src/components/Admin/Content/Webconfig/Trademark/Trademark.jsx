@@ -67,7 +67,6 @@ const Trademark = () => {
   ];
 
   const HandleUpdate = (idx) => {
-    console.log(IcoUrl);
     if (!Data && !LogoUrl && !IcoUrl) {
       notification["error"]({
         message: "Lỗi !",

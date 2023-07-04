@@ -8,14 +8,24 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { FiEdit } from "react-icons/fi";
 import { FcViewDetails } from "react-icons/fc";
 import { MdDeleteForever } from "react-icons/md";
-import { Popconfirm, message } from "antd";
+import { Popconfirm, message, notification } from "antd";
 import { useData } from "../../../../../../Context/DataProviders";
+import { delDocument } from "../../../../../../Config/Services/Firebase/FireStoreDB";
+import { useStateProvider } from "../../../../../../Context/StateProvider";
 
 const ListSlide = (type) => {
   const [ListProducts, setListProducts] = useState([]);
   const { Slides } = useData();
-
-  const HandleDelete = (idx) => {};
+  const { setIsRefetch } = useStateProvider();
+  const HandleDelete = (id) => {
+    delDocument("slide", id).then(() => {
+      notification["success"]({
+        message: "Thành công!",
+        description: `Yêu cầu của bạn đã được thực hiện thành công !`,
+      });
+    });
+    setIsRefetch("deleted");
+  };
 
   useEffect(() => {
     if (type.type === "persona") {
@@ -70,7 +80,10 @@ const ListSlide = (type) => {
         </div>
         <div className="h-[250px] w-[350px] border mt-5 rounded-2xl overflow-y-scroll ">
           {ListProducts?.map((data, idx) => (
-            <div className="grid  cols-3 items-center my-2  ml-1 justify-start px-5 ">
+            <div
+              key={idx}
+              className="grid  cols-3 items-center my-2  ml-1 justify-start px-5 "
+            >
               <div className="group relative ">
                 <FiEdit className="text-red-600 hover:scale-125 duration-300 " />
                 <div className="w-[120px] bg-white opacity-90 absolute -top-2 h-8 left-5 rounded-lg hidden group-hover:block ">

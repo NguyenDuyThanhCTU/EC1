@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "../../../Context/AuthProviders";
 import DropDown from "../Item/DropDown";
-import { useStateProvider } from "../../../Context/StateProvider";
 import Clock from "./Clock/Clock";
 
 const Header = () => {

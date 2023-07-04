@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ProductSection2Items } from "../../../Utils/temp";
 import Card from "../../Item/Card";
 

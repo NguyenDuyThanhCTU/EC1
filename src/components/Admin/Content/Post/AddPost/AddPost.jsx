@@ -14,7 +14,6 @@ import {
   getDocumentByField,
 } from "../../../../../Config/Services/Firebase/FireStoreDB";
 import { AdminPostSection } from "../../../../../Utils/item";
-import { useData } from "../../../../../Context/DataProviders";
 
 const AddProduct = ({ type }) => {
   const [imageUrl, setImageUrl] = useState();
@@ -222,9 +221,9 @@ const AddProduct = ({ type }) => {
                       setType(e.target.value);
                     }}
                   >
-                    {DataFetch?.map((item) => (
+                    {DataFetch?.map((item, idx) => (
                       <option
-                        key={item.name}
+                        key={idx}
                         className=" outline-none capitalize bg-white text-gray-700 text-md p-2 hover:bg-slate-300 "
                         value={item.name}
                       >

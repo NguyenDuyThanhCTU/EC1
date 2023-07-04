@@ -17,18 +17,9 @@ export const DataProviders = ({ children }) => {
   const [Ico, setIco] = useState("");
   const [Websitename, setWebsiteName] = useState("");
 
-  const [Facebook, setFacebook] = useState();
-  const [Fanpages, setFanpages] = useState();
-  const [Instagram, setInstagram] = useState();
-  const [Twitter, setTwitter] = useState();
-  const [Message, setMessage] = useState();
-  const [Tiktok, setTiktok] = useState();
-  const [Zalo, setZalo] = useState();
-  const [Youtube, setYoutube] = useState();
   // Custom
 
   const [Advertisement, setAdvertisement] = useState([]);
-  const [HomePosts, setHomePosts] = useState([]);
   const [NewsPosts, setNewsPosts] = useState([]);
 
   const [TypePost, setTypePost] = useState([]);
@@ -40,9 +31,18 @@ export const DataProviders = ({ children }) => {
   const [YearOfBirth, setYearOfBirth] = useState();
   const [StartJob, setStartJob] = useState();
   const [Avatar, setAvatar] = useState();
+
+  const [nameAdmin, setNameAdmin] = useState();
+  const [avatarAdmin, setAvatarAdmin] = useState();
+
   return (
     <DataContext.Provider
       value={{
+        nameAdmin,
+        setNameAdmin,
+        avatarAdmin,
+        setAvatarAdmin,
+
         Avatar,
         setAvatar,
         userName,
@@ -66,23 +66,6 @@ export const DataProviders = ({ children }) => {
         setProducts,
         NewsPosts,
         setNewsPosts,
-
-        Facebook,
-        setFacebook,
-        Fanpages,
-        setFanpages,
-        Instagram,
-        setInstagram,
-        Twitter,
-        setTwitter,
-        Message,
-        setMessage,
-        Tiktok,
-        setTiktok,
-        Zalo,
-        setZalo,
-        Youtube,
-        setYoutube,
 
         Phone,
         setPhone,

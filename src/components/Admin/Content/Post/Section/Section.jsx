@@ -16,7 +16,10 @@ const Section = ({ title, Data, HandleDelete, setIsUploadProduct }) => {
       {/* h-270px */}
       <div className="border border-gray-500 rounded-xl mx-5 mt-5 h-[500px] overflow-y-scroll">
         {Data?.map((data, idx) => (
-          <div className="grid  cols-7 items-center my-2  ml-1 justify-start px-5 ">
+          <div
+            key={data.id}
+            className="grid  cols-7 items-center my-2  ml-1 justify-start px-5 "
+          >
             <div className="group relative ">
               <FiEdit className="text-red-600 hover:scale-125 duration-300 " />
               <div className="w-[120px] bg-white opacity-90 absolute -top-2 h-8 left-5 rounded-lg hidden group-hover:block ">

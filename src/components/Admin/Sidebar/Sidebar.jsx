@@ -1,12 +1,12 @@
 import React from "react";
-import { TbListDetails, TbSlideshow } from "react-icons/tb";
-import { BiNetworkChart } from "react-icons/bi";
-import { MdOutlinePostAdd } from "react-icons/md";
-import { AiOutlineUnorderedList } from "react-icons/ai";
-import { CgListTree } from "react-icons/cg";
+
 import { useStateProvider } from "../../../Context/StateProvider";
-import { ProductSidebarAdmin, WebsiteSidebarAdmin } from "../../../Utils/item";
-import { Alert, notification } from "antd";
+import {
+  IconMapping,
+  ProductSidebarAdmin,
+  WebsiteSidebarAdmin,
+} from "../../../Utils/item";
+import { notification } from "antd";
 const Sidebar = () => {
   const { isSelected, setSelected } = useStateProvider();
   const HandleBlock = () => {
@@ -31,17 +31,7 @@ const Sidebar = () => {
           <h3 className="text-[25px]">Website</h3>
           <div className="flex flex-col items-start gap-10">
             {WebsiteSidebarAdmin.map((items, idx) => {
-              let Icon;
-
-              if (items.icon === "TbListDetails") {
-                Icon = TbListDetails;
-              } else if (items.icon === "TbSlideshow") {
-                Icon = TbSlideshow;
-              } else if (items.icon === "BiNetworkChart") {
-                Icon = BiNetworkChart;
-              } else if (items.icon === "MdOutlinePostAdd") {
-                Icon = MdOutlinePostAdd;
-              }
+              let Icon = IconMapping[items.icon];
 
               return (
                 <div
@@ -67,27 +57,16 @@ const Sidebar = () => {
           <h3 className="text-[28px]">Sản phẩm</h3>
           <div className="flex flex-col items-start gap-10">
             {ProductSidebarAdmin.map((items, idx) => {
-              let Icon;
+              let Icon = IconMapping[items.icon];
 
-              if (items.icon === "AiOutlineUnorderedList") {
-                Icon = AiOutlineUnorderedList;
-              } else if (items.icon === "CgListTree") {
-                Icon = CgListTree;
-              }
               return (
                 <div
-                  className={`flex gap-3 items-center cursor-pointer hover:scale-125 duration-300 ${
-                    isSelected === idx + 4 ? "text-blue-400" : "border-white"
-                  }`}
+                  className={`flex gap-3 items-center cursor-pointer hover:scale-125 duration-300 ${"border-white"}`}
                   onClick={() => HandleBlock()}
                 >
                   {Icon && (
                     <Icon
-                      className={`border-2 rounded-full text-[30px] p-[3px]  ${
-                        isSelected === idx + 4
-                          ? "border-blue-400"
-                          : "border-white"
-                      }`}
+                      className={`border-2 rounded-full text-[30px] p-[3px]  ${"border-white"}`}
                     />
                   )}
                   <p> {items.name}</p>
@@ -108,6 +87,8 @@ const Sidebar = () => {
             ? "translate-y-[142px]"
             : isSelected === 3
             ? "translate-y-[212px]"
+            : isSelected === 4
+            ? "translate-y-[282px]"
             : null
         }`}
         ></div>

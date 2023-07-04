@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { message } from "antd";
+import { message, notification } from "antd";
 import { useStateProvider } from "../../../../Context/StateProvider";
-import {
-  delDocument,
-  getProducts,
-} from "../../../../Config/Services/Firebase/FireStoreDB";
+import { delDocument } from "../../../../Config/Services/Firebase/FireStoreDB";
 import Section from "./Section/Section";
 import { useData } from "../../../../Context/DataProviders";
 
 const Post = () => {
-  const { setIsUploadProduct } = useStateProvider();
-  const { Products, NewsPosts } = useData();
+  const { setIsUploadProduct, setIsRefetch } = useStateProvider();
+  const { Products } = useData();
 
   const HandleDelete = (id) => {
-    delDocument("products", id).then(() => {
-      message.success("Xóa sản phẩm thành công!");
-      setIsUploadProduct(2);
+    delDocument("posts", id).then(() => {
+      notification["success"]({
+        message: "Thành công!",
+        description: `Yêu cầu của bạn đã được thực hiện thành công !`,
+      });
     });
+    setIsRefetch("deleted");
   };
 
   return (

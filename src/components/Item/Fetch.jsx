@@ -9,6 +9,9 @@ import {
 
 const Fetch = () => {
   const {
+    setNameAdmin,
+    setAvatarAdmin,
+
     setPhone,
     setAdvertisement,
 
@@ -61,6 +64,11 @@ const Fetch = () => {
       setLogo(data[4].websiteLogo);
       setWebsiteName(data[4].websiteName);
       setIco(data[4].websiteIco);
+    });
+
+    getDocuments("accounts").then((data) => {
+      setNameAdmin(data[0].displayName);
+      setAvatarAdmin(data[0].photoURL);
     });
 
     getDocuments("slide").then((data) => {

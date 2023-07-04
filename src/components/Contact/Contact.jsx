@@ -79,7 +79,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="font-LexendDeca text-black  p:w-auto w-full flex flex-col items-center">
-        <div className="  bg-white d:w-[1420px] rounded-t-2xl flex items-start">
+        <div className="  bg-white d:w-[1420px] rounded-t-2xl flex d:flex-row p:flex-col items-start">
           <div className="m-10 flex-1 flex flex-col items-center gap-10">
             <div>
               <img
@@ -98,7 +98,7 @@ const Contact = () => {
               className="outline-none"
             ></iframe>
           </div>
-          <div className="flex-1 text-[18px] ">
+          <div className="flex-1 text-[18px] p-2 ">
             <h3 className="text-[32px] my-10 text-center font-bold">Liên hệ</h3>
             <div className="flex flex-col gap-5">
               <p>

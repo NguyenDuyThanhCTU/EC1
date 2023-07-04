@@ -14,7 +14,6 @@ const SubSection = (type) => {
 
   const { userName, Academic, Work, YearOfBirth, StartJob, Avatar } = useData();
   const [isSelected, setSelected] = useState(false);
-  console.log(Avatar);
   let ContactDashboard = [];
 
   if (type.type === "persona") {
@@ -130,7 +129,7 @@ const SubSection = (type) => {
           {ContactDashboard.map((items, idx) => {
             let Type = items.type;
             return (
-              <>
+              <div key={idx}>
                 <label>{items.name}</label>
                 <div className="flex gap-5 ">
                   {Type && (
@@ -169,7 +168,7 @@ const SubSection = (type) => {
                     )}
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

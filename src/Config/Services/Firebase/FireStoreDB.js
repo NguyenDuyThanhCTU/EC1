@@ -9,10 +9,8 @@ import {
   doc,
   serverTimestamp,
   orderBy,
-  onSnapshot,
   Timestamp,
   deleteDoc,
-  arrayUnion,
 } from "firebase/firestore";
 import { db } from "../../Firebase";
 
@@ -24,27 +22,6 @@ export const addDocument = async (Collection, data) => {
     console.log("Document written with ID: ", newDocument.id);
   } catch (error) {
     console.error("Error adding document: ", error);
-  }
-};
-
-export const addDocumentByField = async (
-  collectionName,
-  documentName,
-  arrayField,
-  fieldData
-) => {
-  const documentRef = doc(collection(db, collectionName), documentName);
-
-  const fieldUpdate = {};
-  fieldUpdate[arrayField] = arrayUnion(fieldData);
-
-  try {
-    await updateDoc(documentRef, fieldUpdate);
-    console.log(
-      `Data added to field '${arrayField}' in document '${documentName}'`
-    );
-  } catch (error) {
-    console.error("Error adding data to field: ", error);
   }
 };
 
@@ -62,13 +39,6 @@ export const getDocuments = async (Collection) => {
   } catch (error) {
     console.error("Error get document: ", error);
   }
-};
-
-export const getDocumentsById = async (CollectionName, id) => {
-  try {
-    const Data = await getDoc(doc(db, CollectionName, id));
-    return Data;
-  } catch (error) {}
 };
 
 export const getProducts = async (Collection) => {
@@ -92,9 +62,7 @@ export const getProducts = async (Collection) => {
     console.error("Error get document: ", error);
   }
 };
-// export const useGetDocumentByField = (CollectionName,field,value){
 
-// }
 export const getDocumentByField = async (Collection, field, value) => {
   try {
     const q = query(collection(db, Collection), where(field, "==", value));
@@ -172,16 +140,16 @@ export const updateArrayFieldAtIndex = async (
   index
 ) => {
   try {
-    const ref = doc(db, collectionName, id); // Đường dẫn đến tài liệu cần cập nhật
-    const snapshot = await getDoc(ref); // Lấy dữ liệu hiện tại của tài liệu
+    const ref = doc(db, collectionName, id);
+    const snapshot = await getDoc(ref);
 
     if (snapshot.exists()) {
-      const currentData = snapshot.data(); // Dữ liệu hiện tại của tài liệu
+      const currentData = snapshot.data();
 
       if (Array.isArray(currentData[fieldName])) {
-        const updatedArray = [...currentData[fieldName]]; // Tạo một bản sao của mảng hiện tại
+        const updatedArray = [...currentData[fieldName]];
         if (index >= 0 || index < updatedArray.length) {
-          updatedArray[index] = newData; // Cập nhật giá trị tại vị trí index trong mảng
+          updatedArray[index] = newData;
 
           await updateDoc(ref, { [fieldName]: updatedArray }); // Cập nhật trường mảng trong tài liệu
 

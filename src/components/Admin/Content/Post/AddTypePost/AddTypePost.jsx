@@ -17,7 +17,7 @@ const AddTypePost = () => {
   const [Name, setName] = useState("");
   const { setIsRefetch, setIsUploadProduct } = useStateProvider();
   const { TypePost } = useData();
-  console.log(TypePost);
+
   const handleDiscard = () => {
     setType("Thông tin mới");
     setName("");
@@ -67,7 +67,10 @@ const AddTypePost = () => {
             </div>
             <div className="w-full border border-black h-[300px] overflow-y-scroll">
               {TypePost?.map((data, idx) => (
-                <div className="grid  cols-4 items-center  my-5  ml-1  px-5 ">
+                <div
+                  key={idx}
+                  className="grid  cols-4 items-center  my-5  ml-1  px-5 "
+                >
                   <div className="group relative ">
                     <FiEdit className="text-red-600 hover:scale-125 duration-300 " />
                     <div className="w-[120px] bg-white opacity-90 absolute -top-2 h-8 left-5 rounded-lg hidden group-hover:block ">
@@ -133,9 +136,9 @@ const AddTypePost = () => {
                     setType(e.target.value);
                   }}
                 >
-                  {AdminPostSection?.map((item) => (
+                  {AdminPostSection?.map((item, idx) => (
                     <option
-                      key={item.name}
+                      key={idx}
                       className=" outline-none capitalize bg-white text-gray-700 text-md p-2 hover:bg-slate-300"
                       value={item.name}
                     >

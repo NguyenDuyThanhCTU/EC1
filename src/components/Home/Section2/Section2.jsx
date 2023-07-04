@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import { PersonaSection2 } from "../../../Utils/item";
-import { PersonaSection2Card } from "../../../routes/Temp";
 import Card from "../../Item/Card";
 import { useData } from "../../../Context/DataProviders";
 import { Result } from "antd";

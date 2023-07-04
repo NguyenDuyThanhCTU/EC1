@@ -1,18 +1,25 @@
 import React from "react";
-import { BsEmojiSmile } from "react-icons/bs";
 import { BiCalculator } from "react-icons/bi";
 import { RxMagicWand } from "react-icons/rx";
 import { GiExitDoor } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { AiOutlineProfile } from "react-icons/ai";
+import { useStateProvider } from "../../../Context/StateProvider";
 
 const DropDown = () => {
+  const { setIsUploadProduct } = useStateProvider();
   return (
     <>
       <div className="p-3 min-w-[260px] border-colortopdownBlue border border-solid rounded bg-white relative z-30 ">
         <ul className="text-colortopdownGray leading-6 text-[13px] font-semibold">
-          <li className=" hover:bg-purple-300  duration-300 element-dropdown">
-            <BsEmojiSmile className="inline-block text-colortopdownBlue mr-2" />
-            Trắc ngiệm tính cách
+          <li
+            className=" hover:bg-purple-300  duration-300 element-dropdown"
+            onClick={() => {
+              setIsUploadProduct("profile");
+            }}
+          >
+            <AiOutlineProfile className="inline-block text-colortopdownBlue mr-2" />
+            Hồ sơ
           </li>
           <li className="hover:bg-colortopdownBlue1  duration-300 element-dropdown">
             <BiCalculator className="inline-block text-colortopdownBlue mr-2" />

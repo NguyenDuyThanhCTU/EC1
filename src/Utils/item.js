@@ -1,9 +1,13 @@
 import { SiZalo } from "react-icons/si";
 import { BsFacebook, BsMessenger, BsYoutube } from "react-icons/bs";
 import { HiOutlineUserGroup } from "react-icons/hi";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiOutlineUnorderedList } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
 import { AiOutlineTwitter } from "react-icons/ai";
+import { BiNetworkChart, BiSlideshow } from "react-icons/bi";
+import { TbListDetails, TbSlideshow } from "react-icons/tb";
+import { MdOutlinePostAdd } from "react-icons/md";
+import { CgListTree } from "react-icons/cg";
 
 export const IconMapping = {
   SiZalo: SiZalo,
@@ -14,6 +18,13 @@ export const IconMapping = {
   FaTiktok: FaTiktok,
   AiOutlineTwitter: AiOutlineTwitter,
   BsYoutube: BsYoutube,
+  BiSlideshow: BiSlideshow,
+  TbListDetails: TbListDetails,
+  TbSlideshow: TbSlideshow,
+  BiNetworkChart: BiNetworkChart,
+  MdOutlinePostAdd: MdOutlinePostAdd,
+  AiOutlineUnorderedList: AiOutlineUnorderedList,
+  CgListTree: CgListTree,
 };
 
 export const ProductSidebarAdmin = [
@@ -43,6 +54,10 @@ export const WebsiteSidebarAdmin = [
   {
     name: "Các bài viết",
     icon: "MdOutlinePostAdd",
+  },
+  {
+    name: "Video",
+    icon: "BiSlideshow",
   },
 ];
 
